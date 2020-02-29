@@ -20,6 +20,7 @@ html_theme_options = {
     'navigation_depth': 2,
 }
 html_extra_path = [
+    'assets/overview.png',
     '.nojekyll',
     'CNAME',
 ]
