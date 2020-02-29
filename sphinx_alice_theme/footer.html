@@ -19,7 +19,7 @@
     {% endtrans %}{%- endif %}
 
     {%- if show_sphinx %}
-    {%- if not last_updated %}. {%- endif %}
+        {%- if show_copyright and not last_updated %}. {%- endif %}
         {% set sphinx_ref = '<a href="https://www.sphinx-doc.org/">Sphinx</a>' %}
         {% trans sphinx_ref=sphinx_ref %}Built with {{ sphinx_ref }} using the{% endtrans %}
     <a href="https://github.com/jdknight/sphinx-alice-theme">Alice {% trans %}theme{% endtrans %}</a>.
