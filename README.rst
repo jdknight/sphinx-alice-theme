@@ -15,3 +15,4 @@ This theme can be installed using pip_:
     python -m pip install sphinx-alice-theme
 
 .. _Sphinx: https://www.sphinx-doc.org/
+.. _pip: https://pip.pypa.io/
