@@ -3,7 +3,7 @@
 
 from os import path
 
-__version__ = '0.0.0-dev0'
+__version__ = '0.1.0'
 
 def setup(app):
     app.add_html_theme('sphinx_alice_theme',
