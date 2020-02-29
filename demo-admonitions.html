@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+    <title>admonitions</title>
+
+    <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+</head><body>
+<div class="alice-container">
+    <nav class="sidebar" aria-label="sidebar">
+    <div id="sidebar-top">
+        
+
+        <a href="index.html">
+        
+        Alice Theme for Sphinx
+        
+
+        
+        </a>
+
+        
+    </div>
+
+    
+    <div class="nav-toctree">
+        
+<div>
+    <form id="quick-search" action="search.html" method="get">
+        <input type="text" name="q" placeholder="Search" />
+    </form>
+</div>
+        
+        
+        
+        
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="demo.html">demonstration</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">bibliographic fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-code.html">code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-download.html">download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-images.html">images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-lists.html">lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-other.html">other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">paragraph-level markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-references.html">references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-sections.html">sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+</ul>
+
+        
+        
+    </div>
+    
+</nav>
+<nav class="mobilebar" aria-label="mobilebar" id="z">
+    <button id="mobilebar-toggle-menu">&#8676;</button>
+
+    <script>
+    $('#mobilebar-toggle-menu').click(function() {
+        $('#mobilebar-toggle-menu').css('display', 'none');
+        $('#sidebar-top').css('display', 'none');
+        $('nav.sidebar').css('display', 'unset');
+        $('section').css('padding-left', '15rem');
+    });
+    </script>
+
+    
+    <a href="index.html"> Alice Theme for Sphinx
+    
+    </a>
+</nav>
+    <section>
+        <div class="alice-content">
+            
+            <div class="nav-container">
+                
+                <div class="nav-top float-right">
+                    
+                    <a href="demo.html" title="demonstration" accesskey="p">← Previous</a>
+                    
+                    
+                     |
+                    
+                    
+                    <a href="demo-bibliographic.html" title="bibliographic fields" accesskey="n">Next →</a>
+                    
+                </div>
+                
+                <ul class="breadcrumbs">
+    <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+    
+    <li><a href="demo.html">demonstration</a> &raquo;</li>
+    
+    <li>admonitions</li>
+</ul>
+                
+            </div>
+
+            <hr/>
+            
+            
+  <div class="section" id="admonitions">
+<h1>admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-title admonition">
+<p class="admonition-title">title</p>
+<p>This is an “admonition” block message.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This is an “attention” block message.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This is a “caution” block message.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>This is a “danger” block message.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>This is an “error” block message.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This is a “hint” block message.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is a “important” block message.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a “note” block message.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is a “tip” block message.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a “warning” block message.</p>
+</div>
+</div>
+
+
+
+            <hr/>
+
+            
+            <div class="nav-container nav-bottom">
+                
+                <a href="demo-bibliographic.html" class="float-right"
+                        title="bibliographic fields" accesskey="n" rel="next">Next →</a>
+                
+                
+                <a href="demo.html" class="float-left"
+                        title="demonstration" accesskey="p" rel="prev">← Previous</a>
+                
+            </div>
+            
+
+            <footer>
+    
+    <a href="_sources/demo-admonitions.rst.txt" rel="nofollow">View page source</a>.
+        <br />
+    
+    &#169; Copyright 2020 James Knight.
+        
+        Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
+    <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
+</footer>
+        </div>
+    </section>
+</div>
+</body>
+</html>

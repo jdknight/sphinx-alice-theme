@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+    <title>options</title>
+
+    <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+</head><body>
+<div class="alice-container">
+    <nav class="sidebar" aria-label="sidebar">
+    <div id="sidebar-top">
+        
+
+        <a href="index.html">
+        
+        Alice Theme for Sphinx
+        
+
+        
+        </a>
+
+        
+    </div>
+
+    
+    <div class="nav-toctree">
+        
+<div>
+    <form id="quick-search" action="search.html" method="get">
+        <input type="text" name="q" placeholder="Search" />
+    </form>
+</div>
+        
+        
+        
+        
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#canonical-url">canonical_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#includehidden">includehidden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation-depth">navigation_depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prev-next-buttons-location">prev_next_buttons_location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#titles-only">titles_only</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">demonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+</ul>
+
+        
+        
+    </div>
+    
+</nav>
+<nav class="mobilebar" aria-label="mobilebar" id="z">
+    <button id="mobilebar-toggle-menu">&#8676;</button>
+
+    <script>
+    $('#mobilebar-toggle-menu').click(function() {
+        $('#mobilebar-toggle-menu').css('display', 'none');
+        $('#sidebar-top').css('display', 'none');
+        $('nav.sidebar').css('display', 'unset');
+        $('section').css('padding-left', '15rem');
+    });
+    </script>
+
+    
+    <a href="index.html"> Alice Theme for Sphinx
+    
+    </a>
+</nav>
+    <section>
+        <div class="alice-content">
+            
+            <div class="nav-container">
+                
+                <div class="nav-top float-right">
+                    
+                    <a href="install.html" title="installation" accesskey="p">← Previous</a>
+                    
+                    
+                     |
+                    
+                    
+                    <a href="demo.html" title="demonstration" accesskey="n">Next →</a>
+                    
+                </div>
+                
+                <ul class="breadcrumbs">
+    <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+    
+    <li>options</li>
+</ul>
+                
+            </div>
+
+            <hr/>
+            
+            
+  <div class="section" id="options">
+<h1>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<p>The Alice theme supports a series of theme-specific options specified through
+the <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> configuration. A full option set is as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">#&#39;canonical_url&#39;: &#39;https://www.example.com&#39;,</span>
+    <span class="c1">#&#39;includehidden&#39;: False,</span>
+    <span class="c1">#&#39;navigation_depth&#39;: 4,</span>
+    <span class="c1">#&#39;prev_next_buttons_location&#39;: &#39;both&#39;,</span>
+    <span class="c1">#&#39;titles_only&#39;: False,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For standard HTML configuration and theme options, also consult:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Sphinx – Configuration – Options for HTML output</div>
+<div class="line"><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output">http://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output</a></div>
+</div>
+</div></blockquote>
+<p>The following outlines the specific theme options provided by this extension:</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#canonical-url" id="id1">canonical_url</a></p></li>
+<li><p><a class="reference internal" href="#includehidden" id="id2">includehidden</a></p></li>
+<li><p><a class="reference internal" href="#navigation-depth" id="id3">navigation_depth</a></p></li>
+<li><p><a class="reference internal" href="#prev-next-buttons-location" id="id4">prev_next_buttons_location</a></p></li>
+<li><p><a class="reference internal" href="#titles-only" id="id5">titles_only</a></p></li>
+</ul>
+</div>
+<div class="section" id="canonical-url">
+<h2><a class="toc-backref" href="#id1">canonical_url</a><a class="headerlink" href="#canonical-url" title="Permalink to this headline">¶</a></h2>
+<p>Specifies the value which should be added (if any) into the
+<a class="reference external" href="https://wikipedia.org/wiki/Canonical_link_element">canonical link HTML element</a> in every page header. By default, no canonical
+element is added.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;canonical_url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://www.example.com&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="includehidden">
+<h2><a class="toc-backref" href="#id2">includehidden</a><a class="headerlink" href="#includehidden" title="Permalink to this headline">¶</a></h2>
+<p>Specifies whether or not the navigation will includes hidden marked table(s) of
+contents. By default, table(s) of contents which are marked with the
+<code class="docutils literal notranslate"><span class="pre">:hidden:</span></code> option remain hidden with a value of <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;includehidden&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="navigation-depth">
+<h2><a class="toc-backref" href="#id3">navigation_depth</a><a class="headerlink" href="#navigation-depth" title="Permalink to this headline">¶</a></h2>
+<p>Specifies the maximum depth of children which will be visible in a table of
+contents tree. By default, a maximum of depth of <code class="docutils literal notranslate"><span class="pre">4</span></code> is applied. Set this to
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> to not restrict the depth of any tree.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;navigation_depth&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="prev-next-buttons-location">
+<h2><a class="toc-backref" href="#id4">prev_next_buttons_location</a><a class="headerlink" href="#prev-next-buttons-location" title="Permalink to this headline">¶</a></h2>
+<p>Configures how “Next” and “Previous” links (if any) should be rendered in the
+final documentation set. Permitted values include <code class="docutils literal notranslate"><span class="pre">both</span></code>, <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">bottom</span></code>
+or <code class="docutils literal notranslate"><span class="pre">None</span></code>. By default, these links are included in <code class="docutils literal notranslate"><span class="pre">both</span></code> the top and the
+bottom of each page.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;prev_next_buttons_location&#39;</span><span class="p">:</span> <span class="s1">&#39;both&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="titles-only">
+<h2><a class="toc-backref" href="#id5">titles_only</a><a class="headerlink" href="#titles-only" title="Permalink to this headline">¶</a></h2>
+<p>Specifies whether or not only titles (not subheadings) of a document are
+included in table(s) of contents. By default, subheadings are permitted with a
+value of <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;titles_only&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+
+            <hr/>
+
+            
+            <div class="nav-container nav-bottom">
+                
+                <a href="demo.html" class="float-right"
+                        title="demonstration" accesskey="n" rel="next">Next →</a>
+                
+                
+                <a href="install.html" class="float-left"
+                        title="installation" accesskey="p" rel="prev">← Previous</a>
+                
+            </div>
+            
+
+            <footer>
+    
+    <a href="_sources/options.rst.txt" rel="nofollow">View page source</a>.
+        <br />
+    
+    &#169; Copyright 2020 James Knight.
+        
+        Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
+    <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
+</footer>
+        </div>
+    </section>
+</div>
+</body>
+</html>
