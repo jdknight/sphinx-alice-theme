@@ -14,3 +14,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+# testing
+/.tox/
+/test/_build/
