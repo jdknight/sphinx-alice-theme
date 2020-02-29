@@ -1,6 +1,10 @@
 Alice Theme for Sphinx
 ======================
 
+.. image:: https://img.shields.io/pypi/v/sphinx-alice-theme.svg
+    :target: https://pypi.python.org/pypi/sphinx-alice-theme
+    :alt: pip Version
+
 Provides the Alice theme for Sphinx_ projects.
 
 installation
