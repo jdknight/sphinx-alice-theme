@@ -12,6 +12,7 @@ The Alice theme for Sphinx_ documentation.
     :maxdepth: 2
 
     install
+    usage
     options
     demo
     hacking

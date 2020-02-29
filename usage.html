@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
-    <title>hacking</title>
+    <title>usage</title>
 
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
@@ -48,10 +48,10 @@
         
         <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo.html">demonstration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
 </ul>
 
         
@@ -83,20 +83,20 @@
                 
                 <div class="nav-top float-right">
                     
-                    <a href="demo-tables.html" title="tables" accesskey="p">← Previous</a>
+                    <a href="install.html" title="installation" accesskey="p">← Previous</a>
                     
                     
                      |
                     
                     
-                    <a href="release-notes.html" title="release notes" accesskey="n">Next →</a>
+                    <a href="options.html" title="options" accesskey="n">Next →</a>
                     
                 </div>
                 
                 <ul class="breadcrumbs">
     <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
     
-    <li>hacking</li>
+    <li>usage</li>
 </ul>
                 
             </div>
@@ -104,22 +104,25 @@
             <hr/>
             
             
-  <div class="section" id="hacking">
-<h1>hacking<a class="headerlink" href="#hacking" title="Permalink to this headline">¶</a></h1>
-<p>Users who want to override specific theme stylings can do so by injecting a
-custom stylesheet into the generated output. For example, a user can create a
-stylesheet <code class="docutils literal notranslate"><span class="pre">_static/theme_overrides.css</span></code> with the following options added into
-<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;css_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;_static/theme_overrides.css&#39;</span><span class="p">],</span>
-<span class="p">}</span>
-<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+  <div class="section" id="usage">
+<h1>usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>For an existing Sphinx documentation set, the Alice theme can be applied by
+configuring the <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a> value to <code class="docutils literal notranslate"><span class="pre">sphinx_alice_theme</span></code>. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_alice_theme&#39;</span>
 </pre></div>
 </div>
-<p>Example styling of a user overriding the header color is as follows:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="mh">#ff0000</span> <span class="cp">!important</span><span class="p">;</span>
-<span class="p">}</span>
+<p>For users who wish to test this theme against their documentation set without
+modifying a configuration file, the following can be invoked for the <code class="docutils literal notranslate"><span class="pre">html</span></code>
+builder:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -b html . _build/html -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
+<span class="go">   (or)</span>
+<span class="gp">$</span> python -m sphinx -b html . _build/html -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
+</pre></div>
+</div>
+<p>Or the following for the <code class="docutils literal notranslate"><span class="pre">singlehtml</span></code> builder:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -b singlehtml . _build/singlehtml -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
+<span class="go">   (or)</span>
+<span class="gp">$</span> python -m sphinx -b singlehtml . _build/singlehtml -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
 </pre></div>
 </div>
 </div>
@@ -131,19 +134,19 @@ stylesheet <code class="docutils literal notranslate"><span class="pre">_static/
             
             <div class="nav-container nav-bottom">
                 
-                <a href="release-notes.html" class="float-right"
-                        title="release notes" accesskey="n" rel="next">Next →</a>
+                <a href="options.html" class="float-right"
+                        title="options" accesskey="n" rel="next">Next →</a>
                 
                 
-                <a href="demo-tables.html" class="float-left"
-                        title="tables" accesskey="p" rel="prev">← Previous</a>
+                <a href="install.html" class="float-left"
+                        title="installation" accesskey="p" rel="prev">← Previous</a>
                 
             </div>
             
 
             <footer>
     
-    <a href="_sources/hacking.rst.txt" rel="nofollow">View page source</a>.
+    <a href="_sources/usage.rst.txt" rel="nofollow">View page source</a>.
         <br />
     
     &#169; Copyright 2020 James Knight.
