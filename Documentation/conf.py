@@ -19,3 +19,4 @@ html_theme_path = ['../']
 html_theme_options = {
     'navigation_depth': 2,
 }
+html_extra_path = ['.nojekyll']
