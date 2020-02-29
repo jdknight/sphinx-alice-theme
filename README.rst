@@ -5,6 +5,10 @@ Alice Theme for Sphinx
     :target: https://pypi.python.org/pypi/sphinx-alice-theme
     :alt: pip Version
 
+.. image:: https://github.com/jdknight/sphinx-alice-theme/workflows/build/badge.svg?branch=master
+    :target: https://github.com/jdknight/sphinx-alice-theme/actions?query=workflow%3Abuild
+    :alt: Build
+
 .. image:: https://github.com/jdknight/sphinx-alice-theme/workflows/docs/badge.svg?branch=master
     :target: https://sphinx-alice-theme.jdknight.me/
     :alt: Documentation
