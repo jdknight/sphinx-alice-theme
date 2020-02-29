@@ -39,7 +39,7 @@ setup(
     ],
     license='BSD-2-Clause',
     long_description=read('README.rst'),
-    name='Alice Theme for Sphinx',
+    name='sphinx-alice-theme',
     packages=find_packages(exclude=["test*"]),
     platforms='any',
     test_suite='test',
