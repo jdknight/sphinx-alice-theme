@@ -15,6 +15,10 @@ Alice Theme for Sphinx
 
 Provides the Alice theme for Sphinx_ projects.
 
+.. image:: https://sphinx-alice-theme.jdknight.me/overview.png
+   :align: center
+   :width: 500px
+
 installation
 ------------
 
