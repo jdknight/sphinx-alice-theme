@@ -5,6 +5,10 @@ Alice Theme for Sphinx
     :target: https://pypi.python.org/pypi/sphinx-alice-theme
     :alt: pip Version
 
+.. image:: https://github.com/jdknight/sphinx-alice-theme/workflows/Documentation/badge.svg?branch=master
+    :target: https://sphinx-alice-theme.jdknight.me/
+    :alt: Documentation
+
 Provides the Alice theme for Sphinx_ projects.
 
 installation
