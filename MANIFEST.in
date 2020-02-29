@@ -1,0 +1,7 @@
+include LICENSE
+include README.rst
+graft sphinx_alice_theme
+
+global-exclude *.py[cod]
+global-exclude .git*
+global-exclude __pycache__

@@ -1,0 +1,7 @@
+{%- if builder != 'singlehtml' %}
+<div>
+    <form id="quick-search" action="{{ pathto('search') }}" method="get">
+        <input type="text" name="q" placeholder="{{ _('Search') }}" />
+    </form>
+</div>
+{%- endif %}

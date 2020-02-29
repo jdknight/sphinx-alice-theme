@@ -1,0 +1,57 @@
+<nav class="sidebar" aria-label="sidebar">
+    <div id="sidebar-top">
+        {% block sidebartitle %}
+
+        <a href="{{ pathto(master_doc) }}">
+        {% if not theme_logo_only %}
+        {{ project }}
+        {% endif %}
+
+        {% if logo %}
+        <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="{{ _('Logo') }}"/>
+        {% endif %}
+        </a>
+
+        {% endblock %}
+    </div>
+
+    {% block navigation %}
+    <div class="nav-toctree">
+        {% include "searchbox.html" %}
+        {% block menu %}
+        {% if 'singlehtml' not in builder %}
+        {% set global_toc = toctree(
+            maxdepth=theme_navigation_depth|int,
+            includehidden=theme_includehidden|tobool,
+            titles_only=theme_titles_only|tobool) %}
+        {% endif %}
+        {% if global_toc %}
+        {{ global_toc }}
+        {% else %}
+        <div class="local-toc">{{ toc }}</div>
+        {% endif %}
+        {% endblock %}
+    </div>
+    {% endblock %}
+</nav>
+<nav class="mobilebar" aria-label="mobilebar" id="z">
+    {%- if builder != 'singlehtml' %}
+    <button id="mobilebar-toggle-menu">&#8676;</button>
+
+    <script>
+    $('#mobilebar-toggle-menu').click(function() {
+        $('#mobilebar-toggle-menu').css('display', 'none');
+        $('#sidebar-top').css('display', 'none');
+        $('nav.sidebar').css('display', 'unset');
+        $('section').css('padding-left', '15rem');
+    });
+    </script>
+    {%- endif %}
+
+    {% if logo and theme_logo_only %}
+    <a href="{{ pathto(master_doc) }}">
+    {% else %}
+    <a href="{{ pathto(master_doc) }}"> {{ project }}
+    {% endif %}
+    </a>
+</nav>

@@ -1,0 +1,13 @@
+# building
+/*.egg-info/
+/.eggs/
+/build/
+/dist/
+
+# 'git format-patch' folder
+/outgoing/
+
+# python-specific
+__pycache__/
+*.py[cod]
+*$py.class

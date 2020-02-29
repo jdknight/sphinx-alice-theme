@@ -1,0 +1,95 @@
+{%- set lang = 'en' if lang == None %}
+<!DOCTYPE html>
+<html lang="{{lang}}" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+
+    <link rel="stylesheet" href="{{ pathto('_static/css/normalize.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+    {%- for css in css_files %}
+        {%- if css|attr("filename") %}
+    {{ css_tag(css) }}
+        {%- else %}
+    <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+        {%- endif %}
+    {%- endfor %}
+
+    {%- if favicon %}
+    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+    {%- endif %}
+    {% if theme_canonical_url %}
+    <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
+    {% endif %}
+
+    {%- block scripts %}
+    <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+    {%- for js in script_files %}
+    {{ js_tag(js) }}
+    {%- endfor %}
+    {%- endblock %}
+
+    {%- block extrahead %}{% endblock %}
+</head>
+{%- block body_tag %}<body>{% endblock %}
+{%- block header %}{% endblock %}
+<div class="alice-container">
+    {% include "nav.html" %}
+    <section>
+        <div class="alice-content">
+            {% if (theme_prev_next_buttons_location == 'top' or theme_prev_next_buttons_location == 'both') and (next or prev) %}
+            <div class="nav-container">
+                {% if next or prev %}
+                <div class="nav-top float-right">
+                    {% if prev %}
+                    <a href="{{ prev.link|e }}" title="{{ prev.title|striptags|e }}" accesskey="p">← {{ _('Previous') }}</a>
+                    {% endif %}
+                    {% if next and prev %}
+                     |
+                    {% endif %}
+                    {% if next %}
+                    <a href="{{ next.link|e }}" title="{{ next.title|striptags|e }}" accesskey="n">{{ _('Next') }} →</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {%- if builder != 'singlehtml' %}
+                {% include "breadcrumbs.html" %}
+                {% endif %}
+            </div>
+
+            <hr/>
+            {% elif builder != 'singlehtml' %}
+            {% include "breadcrumbs.html" %}
+            <hr/>
+            {% endif %}
+
+            {%- block document %}
+            {% block body %}{% endblock %}
+            {%- endblock %}
+
+            <hr/>
+
+            {% if (theme_prev_next_buttons_location == 'bottom' or theme_prev_next_buttons_location == 'both') and (next or prev) %}
+            <div class="nav-container nav-bottom">
+                {% if next %}
+                <a href="{{ next.link|e }}" class="float-right"
+                        title="{{ next.title|striptags|e }}" accesskey="n" rel="next">{{ _('Next') }} →</a>
+                {% endif %}
+                {% if prev %}
+                <a href="{{ prev.link|e }}" class="float-left"
+                        title="{{ prev.title|striptags|e }}" accesskey="p" rel="prev">← {{ _('Previous') }}</a>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% include "footer.html" %}
+        </div>
+    </section>
+</div>
+{%- block footer %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<footer>
+    {% if show_source and has_source and sourcename %}
+    <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('View page source') }}</a>.
+        <br />
+    {% endif %}
+
+    {%- if show_copyright %}
+        {%- if hasdoc('copyright') %}
+    &#169; <a href="{{ pathto('copyright') }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright }}
+        {%- else %}
+    &#169; {% trans %}Copyright{% endtrans %} {{ copyright }}
+        {%- endif %}
+    {%- endif %}
+
+    {%- if last_updated %}
+    {%- if show_copyright %}. {%- endif %}
+    {% trans last_updated=last_updated|e %}
+    Last updated on {{ last_updated }}.
+    {% endtrans %}{%- endif %}
+
+    {%- if show_sphinx %}
+    {%- if not last_updated %}. {%- endif %}
+        {% set sphinx_ref = '<a href="https://www.sphinx-doc.org/">Sphinx</a>' %}
+        {% trans sphinx_ref=sphinx_ref %}Built with {{ sphinx_ref }} using the{% endtrans %}
+    <a href="https://github.com/jdknight/sphinx-alice-theme">Alice {% trans %}theme{% endtrans %}</a>.
+    {%- endif %}
+
+    {%- block extrafooter %}{% endblock %}
+</footer>
