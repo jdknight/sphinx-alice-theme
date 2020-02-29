@@ -30,5 +30,17 @@ This theme can be installed using pip_:
         (or)
     python -m pip install sphinx-alice-theme
 
+usage
+-----
+
+For an existing Sphinx documentation set, the Alice theme can be applied by
+configuring the |html_theme|_ value to ``sphinx_alice_theme``. For example:
+
+.. code-block:: python
+
+    html_theme = 'sphinx_alice_theme'
+
+.. |html_theme| replace:: ``html_theme``
 .. _Sphinx: https://www.sphinx-doc.org/
+.. _html_theme: http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme
 .. _pip: https://pip.pypa.io/
