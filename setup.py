@@ -44,6 +44,6 @@ setup(
     platforms='any',
     test_suite='test',
     url='https://github.com/jdknight/sphinx-alice-theme',
-    version='0.1.0',
+    version='0.1.0-dev0',
     zip_safe=False,
 )
