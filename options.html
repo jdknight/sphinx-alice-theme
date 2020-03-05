@@ -75,6 +75,13 @@
         $('#sidebar-top').css('display', 'none');
         $('nav.sidebar').css('display', 'unset');
         $('section').css('padding-left', '15rem');
+
+        $(document).on('click', 'a', function() {
+            $('#mobilebar-toggle-menu').css('display', 'unset');
+            $('#sidebar-top').css('display', 'unset');
+            $('nav.sidebar').css('display', 'none');
+            $('section').css('padding-left', '0rem');
+        });
     });
     </script>
 
@@ -114,7 +121,7 @@
   <div class="section" id="options">
 <h1>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
 <p>The Alice theme supports a series of theme-specific options specified through
-the <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> configuration. A full option set is as follows:</p>
+the <a class="literal-link reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> configuration. A full option set is as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c1">#&#39;canonical_url&#39;: &#39;https://www.example.com&#39;,</span>
     <span class="c1">#&#39;includehidden&#39;: False,</span>

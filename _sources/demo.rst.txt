@@ -8,6 +8,7 @@ capabilities with this theme.
     :maxdepth: 1
 
     demo-admonitions
+    demo-auto
     demo-bibliographic
     demo-code
     demo-download

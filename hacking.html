@@ -68,6 +68,13 @@
         $('#sidebar-top').css('display', 'none');
         $('nav.sidebar').css('display', 'unset');
         $('section').css('padding-left', '15rem');
+
+        $(document).on('click', 'a', function() {
+            $('#mobilebar-toggle-menu').css('display', 'unset');
+            $('#sidebar-top').css('display', 'unset');
+            $('nav.sidebar').css('display', 'none');
+            $('section').css('padding-left', '0rem');
+        });
     });
     </script>
 

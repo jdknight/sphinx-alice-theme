@@ -68,6 +68,13 @@
         $('#sidebar-top').css('display', 'none');
         $('nav.sidebar').css('display', 'unset');
         $('section').css('padding-left', '15rem');
+
+        $(document).on('click', 'a', function() {
+            $('#mobilebar-toggle-menu').css('display', 'unset');
+            $('#sidebar-top').css('display', 'unset');
+            $('nav.sidebar').css('display', 'none');
+            $('section').css('padding-left', '0rem');
+        });
     });
     </script>
 
@@ -107,7 +114,7 @@
   <div class="section" id="usage">
 <h1>usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
 <p>For an existing Sphinx documentation set, the Alice theme can be applied by
-configuring the <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a> value to <code class="docutils literal notranslate"><span class="pre">sphinx_alice_theme</span></code>. For example:</p>
+configuring the <a class="literal-link reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a> value to <code class="docutils literal notranslate"><span class="pre">sphinx_alice_theme</span></code>. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_alice_theme&#39;</span>
 </pre></div>
 </div>

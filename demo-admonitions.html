@@ -52,6 +52,7 @@
 <li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="demo.html">demonstration</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">auto-extensions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">bibliographic fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="demo-code.html">code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="demo-download.html">download</a></li>
@@ -83,6 +84,13 @@
         $('#sidebar-top').css('display', 'none');
         $('nav.sidebar').css('display', 'unset');
         $('section').css('padding-left', '15rem');
+
+        $(document).on('click', 'a', function() {
+            $('#mobilebar-toggle-menu').css('display', 'unset');
+            $('#sidebar-top').css('display', 'unset');
+            $('nav.sidebar').css('display', 'none');
+            $('section').css('padding-left', '0rem');
+        });
     });
     </script>
 
@@ -104,7 +112,7 @@
                      |
                     
                     
-                    <a href="demo-bibliographic.html" title="bibliographic fields" accesskey="n">Next →</a>
+                    <a href="demo-auto.html" title="auto-extensions" accesskey="n">Next →</a>
                     
                 </div>
                 
@@ -172,8 +180,8 @@
             
             <div class="nav-container nav-bottom">
                 
-                <a href="demo-bibliographic.html" class="float-right"
-                        title="bibliographic fields" accesskey="n" rel="next">Next →</a>
+                <a href="demo-auto.html" class="float-right"
+                        title="auto-extensions" accesskey="n" rel="next">Next →</a>
                 
                 
                 <a href="demo.html" class="float-left"
