@@ -466,6 +466,7 @@ h4, h5, h6 {
 .nav-top {
     float: unset;
     text-align: center;
+    margin-top: 1em;
 }
 
 }
