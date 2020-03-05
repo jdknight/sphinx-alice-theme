@@ -14,11 +14,17 @@ h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14 {
 }
 
 h5, h6 {
+    font-size: 0.84rem;
     margin-bottom: 0;
     margin-top: 10px;
 }
 
+h6 {
+    color: #555;
+}
+
 h7, h8, h9, h10, h11, h12, h13, h14 {
+    color: #555;
     font-size: 0.65rem;
     font-weight: 500;
     margin-bottom: 0;
