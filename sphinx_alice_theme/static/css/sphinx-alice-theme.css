@@ -353,7 +353,7 @@ code.download {
     text-align: center;
 }
 
-.footnote-reference, span.fn-backref {
+.footnote-reference, span.fn-backref, .inline-link > span {
     font-size: 75%;
     line-height: 0;
     position: relative;
