@@ -17,6 +17,12 @@ class AliceThemeTransform(SphinxPostTransform):
             if isinstance(next(iter(node.children), None), nodes.inline):
                 classes = node.get('classes', [])
                 classes.append('inline-link')
+            # tag references with `literal` child with a `literal-link` class
+            # (to suppress hover styling)
+            elif isinstance(next(iter(node.children), None), nodes.literal):
+                classes = node.get('classes', [])
+                classes.append('literal-link')
+
 def setup(app):
     app.add_html_theme('sphinx_alice_theme',
         path.abspath(path.dirname(__file__)))

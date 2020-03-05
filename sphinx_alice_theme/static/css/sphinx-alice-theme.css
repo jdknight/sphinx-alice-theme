@@ -49,7 +49,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover:not(.literal-link) {
     text-decoration: underline;
 }
 
