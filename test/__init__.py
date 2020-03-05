@@ -42,6 +42,9 @@ class TestAliceTheme(unittest.TestCase):
         conf['master_doc'] = 'index' # force index for legacy sphinx
         conf['html_theme'] = 'sphinx_alice_theme'
         conf['html_theme_path'] = self.root_dir
+        if 'extensions' not in conf:
+            conf['extensions'] = []
+        conf['extensions'].append('sphinx.ext.autodoc')
 
         with docutils_namespace():
             app = Sphinx(

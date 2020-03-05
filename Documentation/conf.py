@@ -11,6 +11,7 @@ author = 'James Knight'
 
 # sphinx extensions
 extensions = [
+    'sphinx.ext.autodoc',
 ]
 
 # output - html
