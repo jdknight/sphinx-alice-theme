@@ -103,12 +103,12 @@ blockquote {
 }
 
 code, pre {
-    background-color: #eee;
     font-family: RobotoMonoRegular,Roboto Mono,Inconsolata,monospace;
     line-height: 1.4rem;
 }
 
 pre {
+    background-color: #eee;
     border-radius: 8px 20px;
     overflow: auto;
     padding: 1.20rem 1.4rem;
@@ -296,11 +296,18 @@ ul.breadcrumbs li {
     border-color: #c8ffbf;
 }
 
-div > code.literal, a > code.literal, p > code.literal, .option {
-    background-color: #f0f0f0;
+
+div > code.literal,
+a > code.literal,
+p > code.literal,
+.option {
+    background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 2px;
+    border-radius: 2px;
+    color: #c4254f;
     font-size: 0.94em;
-    padding: .26rem .49rem;
+    padding: .18rem .49rem;
 }
 
 caption {
@@ -312,6 +319,14 @@ code.download {
     border: 1px solid #333;
     font-size: 0.94em;
     padding: .26rem .51rem;
+}
+
+.literal {
+    white-space: nowrap;
+}
+
+.sig-name {
+    font-weight: 700;
 }
 
 #sidebar-top, .mobilebar {
