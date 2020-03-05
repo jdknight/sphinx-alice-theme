@@ -388,6 +388,11 @@ code.download {
     list-style-type: none;
 }
 
+.toctree-wrapper li {
+   margin-top: 5px; 
+   margin-bottom: 5px;
+}
+
 .align-left:not(table) {
     float: left;
     text-align: left;
