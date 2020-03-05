@@ -25,3 +25,7 @@ html_extra_path = [
     '.nojekyll',
     'CNAME',
 ]
+
+# inject theme into sphinx's registry (for git-repository builds)
+def setup(app):
+    app.registry.load_extension(app, 'sphinx_alice_theme')
