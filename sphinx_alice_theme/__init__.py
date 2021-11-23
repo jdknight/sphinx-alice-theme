@@ -19,8 +19,10 @@ class AliceThemeTransform(SphinxPostTransform):
             # tag references with `inline` child with a `inline-link` class
             # (to style citation references)
             if isinstance(next_node, nodes.inline):
-                classes = node.get('classes', [])
-                classes.append('inline-link')
+                if 'ids' in node and node['ids'] and \
+                        'internal' in node and node['internal']:
+                    classes = node.get('classes', [])
+                    classes.append('inline-link')
             # tag references with `literal` child with a `literal-link` class
             # (to suppress hover styling)
             elif isinstance(next_node, nodes.literal):
