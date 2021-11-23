@@ -6,7 +6,7 @@ from os import path
 from sphinx.transforms.post_transforms import SphinxPostTransform
 
 
-__version__ = '0.1.0-dev0'
+__version__ = '0.2.0'
 
 
 class AliceThemeTransform(SphinxPostTransform):
