@@ -30,7 +30,16 @@ html_theme_options = {
 html_show_copyright = False
 
 html_extra_path = [
-    'assets/overview.png',
+    'assets/overview.png',  # deprecated
+    'assets/overview-01.png',
+    'assets/overview-02.png',
+    'assets/overview-03.png',
+    'assets/overview-04.png',
+    'assets/overview-05.png',
+    'assets/overview-06.png',
+    'assets/overview-07.png',
+    'assets/overview-08.png',
+    'assets/overview-09.png',
     '.nojekyll',
     'CNAME',
 ]
