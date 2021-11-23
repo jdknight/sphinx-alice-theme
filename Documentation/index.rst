@@ -4,11 +4,6 @@ Alice Theme for Sphinx
 The Alice theme for Sphinx_ documentation.
 
 .. toctree::
-    :hidden:
-
-    self
-
-.. toctree::
     :maxdepth: 2
 
     install
