@@ -42,7 +42,7 @@ specific distributions of Linux. From a terminal, invoke the following commands:
 Arch
 ++++
 
-.. code-block:: shell
+.. code-block:: shell-session
 
     $ sudo pacman -Sy
     $ sudo pacman -S python-pip
@@ -53,7 +53,7 @@ Arch
 CentOS
 ++++++
 
-.. code-block:: shell
+.. code-block:: shell-session
 
     $ sudo yum install epel-release
     $ sudo yum install python-pip
@@ -64,7 +64,7 @@ CentOS
 Fedora
 ++++++
 
-.. code-block:: shell
+.. code-block:: shell-session
 
     $ sudo dnf install python-pip
     $ sudo pip install -U sphinx-alice-theme
@@ -74,7 +74,7 @@ Fedora
 openSUSE
 ++++++++
 
-.. code-block:: shell
+.. code-block:: shell-session
 
     $ pip install -U sphinx-alice-theme
     $ sphinx_alice_theme --version
@@ -83,7 +83,7 @@ openSUSE
 Ubuntu
 ++++++
 
-.. code-block:: shell
+.. code-block:: shell-session
 
     $ sudo apt-get update
     $ sudo apt-get install python-pip
@@ -96,7 +96,7 @@ OS X
 
 From a terminal, invoke the following commands:
 
-.. code-block:: shell
+.. code-block:: shell-session
 
     $ sudo easy_install pip
     $ sudo pip install -U sphinx-alice-theme
