@@ -34,26 +34,14 @@
     </div>
     {% endblock %}
 </nav>
-<nav class="mobilebar" aria-label="mobilebar" id="z">
-    {%- if builder != 'singlehtml' %}
-    <button id="mobilebar-toggle-menu">&#8676;</button>
-
-    <script>
-    $('#mobilebar-toggle-menu').click(function() {
-        $('#mobilebar-toggle-menu').css('display', 'none');
-        $('#sidebar-top').css('display', 'none');
-        $('nav.sidebar').css('display', 'unset');
-        $('section').css('padding-left', '15rem');
-
-        $(document).on('click', 'a', function() {
-            $('#mobilebar-toggle-menu').css('display', 'unset');
-            $('#sidebar-top').css('display', 'unset');
-            $('nav.sidebar').css('display', 'none');
-            $('section').css('padding-left', '0rem');
-        });
-    });
-    </script>
-    {%- endif %}
+<nav class="alice-topbar">
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
 
     {% if logo and theme_logo_only %}
     <a href="{{ pathto(master_doc) }}">
@@ -61,4 +49,29 @@
     <a href="{{ pathto(master_doc) }}"> {{ project }}
     {% endif %}
     </a>
+
+    &nbsp;
 </nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
