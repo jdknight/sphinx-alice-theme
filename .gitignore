@@ -17,4 +17,4 @@ __pycache__/
 
 # testing
 /.tox/
-/test/_build/
+/tests/_build/

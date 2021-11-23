@@ -9,6 +9,7 @@ import shutil
 import sys
 import unittest
 
+
 class TestAliceTheme(unittest.TestCase):
     @classmethod
     def setUpClass(self):
@@ -39,22 +40,23 @@ class TestAliceTheme(unittest.TestCase):
 
     def _build_documentation(self, builder, out_dir, doctree_dir, config=None):
         conf = dict(config) if config else {}
-        conf['master_doc'] = 'index' # force index for legacy sphinx
+        conf['master_doc'] = 'index'  # force index for legacy sphinx
         conf['html_theme'] = 'sphinx_alice_theme'
         conf['html_theme_path'] = self.root_dir
         if 'extensions' not in conf:
             conf['extensions'] = []
         conf['extensions'].append('sphinx.ext.autodoc')
+        conf['extensions'].append('sphinx_alice_theme')
 
         with docutils_namespace():
             app = Sphinx(
-                self.doc_dir,        # documentation to process
-                None,                # default configuration
-                out_dir,             # output for generated documents
-                doctree_dir,         # output for doctree files
-                builder,             # builder to execute
-                confoverrides=conf,  # load provided configuration (volatile)
-                warning=sys.stderr,  # warnings output
-                warningiserror=True) # treat warnings as errors
+                self.doc_dir,         # documentation to process
+                None,                 # default configuration
+                out_dir,              # output for generated documents
+                doctree_dir,          # output for doctree files
+                builder,              # builder to execute
+                confoverrides=conf,   # load provided configuration (volatile)
+                warning=sys.stderr,   # warnings output
+                warningiserror=True)  # treat warnings as errors
 
             app.build(force_all=True)
