@@ -1,4 +1,4 @@
-admonitions
+Admonitions
 ===========
 
 .. admonition:: title

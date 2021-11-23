@@ -1,4 +1,4 @@
-indentation
+Indentation
 ===========
 
 This is a top-level paragraph.

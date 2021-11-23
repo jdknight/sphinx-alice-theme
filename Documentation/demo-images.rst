@@ -1,4 +1,4 @@
-images
+Images
 ======
 
 .. image:: assets/img.png

@@ -1,4 +1,4 @@
-usage
+Usage
 #####
 
 For an existing Sphinx documentation set, the Alice theme can be applied by

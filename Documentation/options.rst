@@ -1,4 +1,4 @@
-options
+Options
 #######
 
 The Alice theme supports a series of theme-specific options specified through

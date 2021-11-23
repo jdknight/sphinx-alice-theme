@@ -1,7 +1,7 @@
-lists
+Lists
 =====
 
-bullet lists
+Bullet lists
 ------------
 
 The following is an example of bullet lists. Each list item should be tightly
@@ -69,7 +69,7 @@ multiple blocks.
 
 This paragraph is not part of the list.
 
-enumerated lists
+Enumerated lists
 ----------------
 
 Here is an example of enumerated lists. Each list item should be tightly
@@ -132,7 +132,7 @@ Enumerated lists can also be styled:
    ii) Aliquam dictum justo vitae scelerisque tempus.
    iii) Fusce et libero quis erat mattis porta.
 
-definition lists
+Definition lists
 ----------------
 
 The following is an example of definition lists. A user should be able to
@@ -153,7 +153,7 @@ term 3 : classifier
 term 4 : classifier one : classifier two
    Vivamus vel dolor eget mauris mollis dictum.
 
-glossary
+Glossary
 --------
 
 Sphinx defines glossary markup which is like a definition list; however, a
@@ -192,7 +192,7 @@ glossary provides referenceable terms.
         placerat sapien nisl vitae nibh. Ut aliquam mauris cursus varius
         hendrerit. Donec justo odio, viverra a mi eu, egestas sollicitudin est.
 
-list table
+List table
 ----------
 
 The following is an example of a list table:
@@ -234,7 +234,7 @@ Another example of a list table with multiple header rows:
       - 8
       - 9
 
-option lists
+Option lists
 ------------
 
 The following is an example of an option lists for a (Linux) ``ping``
@@ -312,7 +312,7 @@ command:
            timeout in absence of any responses, otherwise ping waits for two
            RTTs.
 
-production list
+Production list
 ---------------
 
 The following is an example of a production list:

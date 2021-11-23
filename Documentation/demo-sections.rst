@@ -1,4 +1,4 @@
-sections
+Sections
 ========
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla risus at
@@ -12,7 +12,7 @@ vitae risus sed eros dignissim interdum et nec lectus. Nullam viverra interdum
 fermentum. Duis elementum non nisl vitae suscipit. Aliquam erat volutpat.
 Phasellus ut tellus venenatis, aliquet orci sagittis, dictum massa.
 
-section title
+Section title
 '''''''''''''
 
 Aliquam ac rhoncus augue. Vestibulum congue leo vitae neque lobortis, mattis
@@ -28,7 +28,7 @@ egestas eros, nec faucibus elit nunc ut neque. Phasellus ut massa posuere,
 auctor dolor non, imperdiet velit. Integer vitae nisl sed enim scelerisque
 interdum.
 
-section title
+Section title
 `````````````
 
 Donec vel lacus ultricies, semper nibh nec, pellentesque urna. Phasellus cursus
@@ -41,7 +41,7 @@ Nulla facilisi. Etiam auctor ipsum quis vehicula rutrum. Nulla vitae commodo
 dui, sit amet placerat enim. Cras consequat, orci in ornare mattis, justo justo
 congue augue, vitae sagittis sem dolor nec ipsum.
 
-section title
+Section title
 .............
 
 Pellentesque rutrum finibus ligula vel placerat. Donec convallis hendrerit
@@ -53,7 +53,7 @@ non lorem iaculis, ac tempus metus semper. Phasellus a lorem orci. Vestibulum
 pharetra scelerisque dolor in dignissim. Nulla in ultricies elit, sed luctus mi.
 Aliquam aliquam diam molestie magna mollis, ac rutrum diam auctor.
 
-section title
+Section title
 ~~~~~~~~~~~~~
 
 Duis vitae egestas dolor. Quisque ultricies maximus ipsum in tempor. Donec nibh
@@ -64,7 +64,7 @@ sodales semper luctus. Sed at dignissim nunc, sed tincidunt quam. Donec pretium
 felis auctor nibh volutpat, vel elementum lorem congue. Vestibulum ante ipsum
 primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
-section title
+Section title
 *************
 
 Donec vitae venenatis lacus. Duis vitae augue semper, dapibus erat quis, tempor

@@ -1,4 +1,4 @@
-markup
+Markup
 ======
 
 This is *emphasized* text.

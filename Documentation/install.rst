@@ -1,4 +1,4 @@
-installation
+Installation
 ############
 
 The recommended method of installation is using pip_:
@@ -17,21 +17,21 @@ To verify the package has been installed, the following command can be used:
         (or)
     python -m sphinx_alice_theme --version
 
-quick-start
+Quick-start
 -----------
 
 The following provides a series of steps to assist in preparing a new
 environment to use this package. This quick-start will aim to use the most
 recent version of Python.
 
-linux
+Linux
 ~~~~~
 
 While the use of Python_/pip_ is almost consistent between Linux distributions,
 the following are a series of helpful steps to install this package under
 specific distributions of Linux. From a terminal, invoke the following commands:
 
-arch
+Arch
 ++++
 
 .. code-block:: shell
@@ -42,7 +42,7 @@ arch
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
-centos
+CentOS
 ++++++
 
 .. code-block:: shell
@@ -53,7 +53,7 @@ centos
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
-fedora
+Fedora
 ++++++
 
 .. code-block:: shell
@@ -63,7 +63,7 @@ fedora
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
-opensuse
+openSUSE
 ++++++++
 
 .. code-block:: shell
@@ -72,7 +72,7 @@ opensuse
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
-ubuntu
+Ubuntu
 ++++++
 
 .. code-block:: shell
@@ -83,7 +83,7 @@ ubuntu
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
-os x
+OS X
 ~~~~
 
 From a terminal, invoke the following commands:
@@ -95,7 +95,7 @@ From a terminal, invoke the following commands:
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
-windows
+Windows
 ~~~~~~~
 
 If not already installed, download the most recent version of Python_:
@@ -115,7 +115,7 @@ Open a Windows command prompt and invoke the following:
     > python -m sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
-development
+Development
 -----------
 
 To install the most recent development sources, the following pip_ command can

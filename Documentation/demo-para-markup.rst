@@ -1,4 +1,4 @@
-paragraph-level markup
+Paragraph-level markup
 ======================
 
 .. versionadded:: 2.5
