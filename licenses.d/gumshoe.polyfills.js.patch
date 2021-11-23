@@ -1,0 +1,4 @@
+222c222
+< 		if (isAtBottom() && isInView(item.content, settings, true)) return true;
+---
+> 		if (isAtBottom() && item && isInView(item.content, settings, true)) return true;
