@@ -1,4 +1,15 @@
 <footer>
+    {% if sat_applied_footer_spacing is not defined %}
+        {%
+        if (show_source and has_source and sourcename) or
+           (show_copyright and (hasdoc('copyright') or copyright)) or
+           last_updated or
+           show_sphinx
+        %}
+        <hr/>
+        {% endif %}
+    {% endif %}
+
     {% if show_source and has_source and sourcename %}
     <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('View page source') }}</a>.
         <br />
@@ -7,7 +18,7 @@
     {%- if show_copyright %}
         {%- if hasdoc('copyright') %}
     &#169; <a href="{{ pathto('copyright') }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright }}
-        {%- else %}
+        {%- elif copyright %}
     &#169; {% trans %}Copyright{% endtrans %} {{ copyright }}
         {%- endif %}
     {%- endif %}

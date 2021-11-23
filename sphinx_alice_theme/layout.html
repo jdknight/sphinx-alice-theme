@@ -71,9 +71,10 @@
             {% block body %}{% endblock %}
             {%- endblock %}
 
+            {% if (theme_prev_next_buttons_location == 'bottom' or theme_prev_next_buttons_location == 'both') and (next or prev) %}
+            {% set sat_applied_footer_spacing = '1' %}
             <hr/>
 
-            {% if (theme_prev_next_buttons_location == 'bottom' or theme_prev_next_buttons_location == 'both') and (next or prev) %}
             <div class="nav-container nav-bottom">
                 {% if next %}
                 <a href="{{ next.link|e }}" class="float-right"
