@@ -5,9 +5,9 @@ The recommended method of installation is using pip_:
 
 .. code-block:: shell
 
-    pip install sphinx-alice-theme
+    pip install -U sphinx-alice-theme
         (or)
-    python -m pip install sphinx-alice-theme
+    python -m pip install -U sphinx-alice-theme
 
 To verify the package has been installed, the following command can be used:
 
@@ -38,7 +38,7 @@ Arch
 
     $ sudo pacman -Sy
     $ sudo pacman -S python-pip
-    $ sudo pip install sphinx-alice-theme
+    $ sudo pip install -U sphinx-alice-theme
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
@@ -49,7 +49,7 @@ CentOS
 
     $ sudo yum install epel-release
     $ sudo yum install python-pip
-    $ sudo pip install sphinx-alice-theme
+    $ sudo pip install -U sphinx-alice-theme
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
@@ -59,7 +59,7 @@ Fedora
 .. code-block:: shell
 
     $ sudo dnf install python-pip
-    $ sudo pip install sphinx-alice-theme
+    $ sudo pip install -U sphinx-alice-theme
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
@@ -68,7 +68,7 @@ openSUSE
 
 .. code-block:: shell
 
-    $ pip install sphinx-alice-theme
+    $ pip install -U sphinx-alice-theme
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
@@ -79,7 +79,7 @@ Ubuntu
 
     $ sudo apt-get update
     $ sudo apt-get install python-pip
-    $ sudo pip install sphinx-alice-theme
+    $ sudo pip install -U sphinx-alice-theme
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
@@ -91,7 +91,7 @@ From a terminal, invoke the following commands:
 .. code-block:: shell
 
     $ sudo easy_install pip
-    $ sudo pip install sphinx-alice-theme
+    $ sudo pip install -U sphinx-alice-theme
     $ sphinx_alice_theme --version
     sphinx-alice-theme <version>
 
