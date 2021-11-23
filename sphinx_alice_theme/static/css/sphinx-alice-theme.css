@@ -361,14 +361,6 @@ code.download {
     vertical-align: baseline;
 }
 
-.footnote-reference.brackets::before {
-    content: '[';
-}
-
-.footnote-reference.brackets::after {
-    content: ']';
-}
-
 .breadcrumbs {
     padding-left: 0;
 }
