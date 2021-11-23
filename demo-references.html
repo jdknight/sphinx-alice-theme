@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
-    <title>references</title>
+    <title>References</title>
 
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css" />
     
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
 </head><body>
 <div class="alice-container">
     <nav class="sidebar" aria-label="sidebar">
@@ -47,27 +50,27 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="demo.html">demonstration</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="demo-admonitions.html">admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">auto-extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">bibliographic fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-code.html">code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-download.html">download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-images.html">images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">indentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-lists.html">lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-other.html">other</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">paragraph-level markup</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">references</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-sections.html">sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="demo.html">Demonstration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="demo-admonitions.html">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">Auto-extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">Bibliographic fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-code.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-download.html">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-lists.html">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-other.html">Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">Paragraph-level markup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-sections.html">Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">Tables</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
 </ul>
 
         
@@ -75,30 +78,45 @@
     </div>
     
 </nav>
-<nav class="mobilebar" aria-label="mobilebar" id="z">
-    <button id="mobilebar-toggle-menu">&#8676;</button>
-
-    <script>
-    $('#mobilebar-toggle-menu').click(function() {
-        $('#mobilebar-toggle-menu').css('display', 'none');
-        $('#sidebar-top').css('display', 'none');
-        $('nav.sidebar').css('display', 'unset');
-        $('section').css('padding-left', '15rem');
-
-        $(document).on('click', 'a', function() {
-            $('#mobilebar-toggle-menu').css('display', 'unset');
-            $('#sidebar-top').css('display', 'unset');
-            $('nav.sidebar').css('display', 'none');
-            $('section').css('padding-left', '0rem');
-        });
-    });
-    </script>
+<nav class="alice-topbar">
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
 
     
     <a href="index.html"> Alice Theme for Sphinx
     
     </a>
+
+    &nbsp;
 </nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
     <section>
         <div class="alice-content">
             
@@ -106,22 +124,22 @@
                 
                 <div class="nav-top float-right">
                     
-                    <a href="demo-para-markup.html" title="paragraph-level markup" accesskey="p">← Previous</a>
+                    <a href="demo-para-markup.html" title="Paragraph-level markup" accesskey="p">← Previous</a>
                     
                     
                      |
                     
                     
-                    <a href="demo-sections.html" title="sections" accesskey="n">Next →</a>
+                    <a href="demo-sections.html" title="Sections" accesskey="n">Next →</a>
                     
                 </div>
                 
                 <ul class="breadcrumbs">
     <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
     
-    <li><a href="demo.html">demonstration</a> &raquo;</li>
+    <li><a href="demo.html">Demonstration</a> &raquo;</li>
     
-    <li>references</li>
+    <li>References</li>
 </ul>
                 
             </div>
@@ -129,11 +147,11 @@
             <hr/>
             
             
-  <div class="section" id="references">
-<h1>references<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+  <section id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
 <p>This is a <a class="reference external" href="https://www.example.com">link</a> to: <a class="reference external" href="https://www.example.com">https://www.example.com</a></p>
-<div class="section" id="citations">
-<h2>citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
+<section id="citations">
+<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
 <p>A page can have multiple <a class="reference internal" href="#citations">citations</a> <a class="inline-link reference internal" href="#cit2001" id="id1"><span>[CIT2001]</span></a>, and it does not matter on the
 order which they are used <a class="inline-link reference internal" href="#cit2003" id="id2"><span>[CIT2003]</span></a>. Adding a series of lorem ipsum to help
 increase spacing to help visualize citation references:</p>
@@ -173,30 +191,30 @@ built <a class="inline-link reference internal" href="#cit2002" id="id4"><span>[
 <dd><p>The last citation example.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="footnotes">
-<h2>footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
 <p>There are various types of footnote methods styles that can be applied. A
-document can reference the first footnote <a class="footnote-reference brackets" href="#note" id="id5">1</a> using a label; and it render
-as “[1]”. A document can also refer to the footnote again <a class="footnote-reference brackets" href="#note" id="id6">1</a> and it should
+document can reference the first footnote <a class="footnote-reference brackets" href="#note" id="id5">[1]</a> using a label; and it render
+as “[1]”. A document can also refer to the footnote again <a class="footnote-reference brackets" href="#note" id="id6">[1]</a> and it should
 again be seen as “[1]”. A document can also use its label form, <a class="reference internal" href="#note">note</a>, to refer
 to the footnote (i.e. as an internal hyperlink reference).</p>
 <dl class="footnote brackets">
-<dt class="label" id="note"><span class="brackets">1</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>,<a href="#id8">3</a>)</span></dt>
+<dt class="label" id="note"><span class="brackets">[1]</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>,<a href="#id8">3</a>)</span></dt>
 <dd><p>This is the footnote labeled “note”.</p>
 </dd>
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id9">2</a></span></dt>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id9">[2]</a></span></dt>
 <dd><p>This is the footnote labeled “note”.</p>
 </dd>
 </dl>
-<p>You can also reference footnotes after the fact either explicitly <a class="footnote-reference brackets" href="#note" id="id8">1</a> or
-anonymously <a class="footnote-reference brackets" href="#id7" id="id9">2</a>.</p>
-<p>A standard way to use footnotes is in an incremental fashion. The first <a class="footnote-reference brackets" href="#id16" id="id10">3</a> and
-second <a class="footnote-reference brackets" href="#id17" id="id11">5</a> footnotes should be “[3]” and “[5]” (anonymous auto-numbered).
+<p>You can also reference footnotes after the fact either explicitly <a class="footnote-reference brackets" href="#note" id="id8">[1]</a> or
+anonymously <a class="footnote-reference brackets" href="#id7" id="id9">[2]</a>.</p>
+<p>A standard way to use footnotes is in an incremental fashion. The first <a class="footnote-reference brackets" href="#id16" id="id10">[3]</a> and
+second <a class="footnote-reference brackets" href="#id17" id="id11">[5]</a> footnotes should be “[3]” and “[5]” (anonymous auto-numbered).
 Adding an additional line of test to help space our the footnote examples to
 help visually see footnote references in play. The next anonymous auto-numbered
-footnotes, <a class="footnote-reference brackets" href="#id18" id="id12">6</a> and <a class="footnote-reference brackets" href="#id19" id="id13">7</a>, will actually be “[6]” and “[7]”. A document can also
-manually override the footnote number <a class="footnote-reference brackets" href="#id15" id="id14">4</a> (a value of “[4]”). Adding a series
+footnotes, <a class="footnote-reference brackets" href="#id18" id="id12">[6]</a> and <a class="footnote-reference brackets" href="#id19" id="id13">[7]</a>, will actually be “[6]” and “[7]”. A document can also
+manually override the footnote number <a class="footnote-reference brackets" href="#id15" id="id14">[4]</a> (a value of “[4]”). Adding a series
 of lorem ipsum to help increase spacing to help visualize footnote references:</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget mattis
 purus, vitae dapibus ipsum. Quisque non nulla magna. Cras euismod nec ligula et
@@ -209,19 +227,19 @@ vitae lobortis erat pellentesque. Morbi sollicitudin tempor nibh et semper.
 Curabitur sed lectus gravida, tincidunt arcu sit amet, congue velit. Interdum et
 malesuada fames ac ante ipsum primis in faucibus.</p>
 <dl class="footnote brackets">
-<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id14">4</a></span></dt>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id14">[4]</a></span></dt>
 <dd><p>This is footnote 4.</p>
 </dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id10">3</a></span></dt>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id10">[3]</a></span></dt>
 <dd><p>This is footnote 3.</p>
 </dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id11">[5]</a></span></dt>
 <dd><p>This is footnote 5.</p>
 </dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id12">[6]</a></span></dt>
 <dd><p>This is footnote 6.</p>
 </dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id13">7</a></span></dt>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id13">[7]</a></span></dt>
 <dd><p>This is footnote 7.</p>
 </dd>
 </dl>
@@ -240,32 +258,34 @@ libero sed, convallis tincidunt est. Donec ut risus in elit tempor sagittis sed
 et neque. Aliquam feugiat ut justo id pellentesque. Quisque sit amet tortor
 tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada
 fames ac turpis egestas.</p>
-</div>
-</div>
+</section>
+</section>
 
 
-
-            <hr/>
 
             
+            
+            <hr/>
+
             <div class="nav-container nav-bottom">
                 
                 <a href="demo-sections.html" class="float-right"
-                        title="sections" accesskey="n" rel="next">Next →</a>
+                        title="Sections" accesskey="n" rel="next">Next →</a>
                 
                 
                 <a href="demo-para-markup.html" class="float-left"
-                        title="paragraph-level markup" accesskey="p" rel="prev">← Previous</a>
+                        title="Paragraph-level markup" accesskey="p" rel="prev">← Previous</a>
                 
             </div>
             
 
             <footer>
     
+
+    
     <a href="_sources/demo-references.rst.txt" rel="nofollow">View page source</a>.
         <br />
     
-    &#169; Copyright 2020 James Knight.
         
         Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
     <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
@@ -273,5 +293,7 @@ fames ac turpis egestas.</p>
         </div>
     </section>
 </div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
 </body>
 </html>

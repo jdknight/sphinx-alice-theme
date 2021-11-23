@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
-    <title>installation</title>
+    <title>Installation</title>
 
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css" />
     
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
 </head><body>
 <div class="alice-container">
     <nav class="sidebar" aria-label="sidebar">
@@ -47,15 +50,15 @@
         
         
         <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#quick-start">quick-start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#development">development</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick-start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development">Development</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demo.html">demonstration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
 </ul>
 
         
@@ -63,30 +66,45 @@
     </div>
     
 </nav>
-<nav class="mobilebar" aria-label="mobilebar" id="z">
-    <button id="mobilebar-toggle-menu">&#8676;</button>
-
-    <script>
-    $('#mobilebar-toggle-menu').click(function() {
-        $('#mobilebar-toggle-menu').css('display', 'none');
-        $('#sidebar-top').css('display', 'none');
-        $('nav.sidebar').css('display', 'unset');
-        $('section').css('padding-left', '15rem');
-
-        $(document).on('click', 'a', function() {
-            $('#mobilebar-toggle-menu').css('display', 'unset');
-            $('#sidebar-top').css('display', 'unset');
-            $('nav.sidebar').css('display', 'none');
-            $('section').css('padding-left', '0rem');
-        });
-    });
-    </script>
+<nav class="alice-topbar">
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
 
     
     <a href="index.html"> Alice Theme for Sphinx
     
     </a>
+
+    &nbsp;
 </nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
     <section>
         <div class="alice-content">
             
@@ -100,14 +118,14 @@
                      |
                     
                     
-                    <a href="usage.html" title="usage" accesskey="n">Next →</a>
+                    <a href="usage.html" title="Usage" accesskey="n">Next →</a>
                     
                 </div>
                 
                 <ul class="breadcrumbs">
     <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
     
-    <li>installation</li>
+    <li>Installation</li>
 </ul>
                 
             </div>
@@ -115,12 +133,12 @@
             <hr/>
             
             
-  <div class="section" id="installation">
-<h1>installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>The recommended method of installation is using <a class="reference external" href="https://pip.pypa.io/">pip</a>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install sphinx-alice-theme
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -U sphinx-alice-theme
     <span class="o">(</span>or<span class="o">)</span>
-python -m pip install sphinx-alice-theme
+python -m pip install -U sphinx-alice-theme
 </pre></div>
 </div>
 <p>To verify the package has been installed, the following command can be used:</p>
@@ -129,76 +147,82 @@ python -m pip install sphinx-alice-theme
 python -m sphinx_alice_theme --version
 </pre></div>
 </div>
-<div class="section" id="quick-start">
-<h2>quick-start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
+<p>This theme can be uninstalled with the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip uninstall sphinx-alice-theme
+    <span class="o">(</span>or<span class="o">)</span>
+python -m pip uninstall sphinx-alice-theme
+</pre></div>
+</div>
+<section id="quick-start">
+<h2>Quick-start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
 <p>The following provides a series of steps to assist in preparing a new
 environment to use this package. This quick-start will aim to use the most
 recent version of Python.</p>
-<div class="section" id="linux">
-<h3>linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<section id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
 <p>While the use of <a class="reference external" href="https://www.python.org/">Python</a>/<a class="reference external" href="https://pip.pypa.io/">pip</a> is almost consistent between Linux distributions,
 the following are a series of helpful steps to install this package under
 specific distributions of Linux. From a terminal, invoke the following commands:</p>
-<div class="section" id="arch">
-<h4>arch<a class="headerlink" href="#arch" title="Permalink to this headline">¶</a></h4>
+<section id="arch">
+<h4>Arch<a class="headerlink" href="#arch" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy
 $ sudo pacman -S python-pip
-$ sudo pip install sphinx-alice-theme
+$ sudo pip install -U sphinx-alice-theme
 $ sphinx_alice_theme --version
 sphinx-alice-theme &lt;version&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="centos">
-<h4>centos<a class="headerlink" href="#centos" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="centos">
+<h4>CentOS<a class="headerlink" href="#centos" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo yum install epel-release
 $ sudo yum install python-pip
-$ sudo pip install sphinx-alice-theme
+$ sudo pip install -U sphinx-alice-theme
 $ sphinx_alice_theme --version
 sphinx-alice-theme &lt;version&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="fedora">
-<h4>fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="fedora">
+<h4>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo dnf install python-pip
-$ sudo pip install sphinx-alice-theme
+$ sudo pip install -U sphinx-alice-theme
 $ sphinx_alice_theme --version
 sphinx-alice-theme &lt;version&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="opensuse">
-<h4>opensuse<a class="headerlink" href="#opensuse" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip install sphinx-alice-theme
+</section>
+<section id="opensuse">
+<h4>openSUSE<a class="headerlink" href="#opensuse" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip install -U sphinx-alice-theme
 $ sphinx_alice_theme --version
 sphinx-alice-theme &lt;version&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="ubuntu">
-<h4>ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ubuntu">
+<h4>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
 $ sudo apt-get install python-pip
-$ sudo pip install sphinx-alice-theme
+$ sudo pip install -U sphinx-alice-theme
 $ sphinx_alice_theme --version
 sphinx-alice-theme &lt;version&gt;
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="os-x">
-<h3>os x<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="os-x">
+<h3>OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
 <p>From a terminal, invoke the following commands:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo easy_install pip
-$ sudo pip install sphinx-alice-theme
+$ sudo pip install -U sphinx-alice-theme
 $ sphinx_alice_theme --version
 sphinx-alice-theme &lt;version&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="windows">
-<h3>windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>If not already installed, download the most recent version of <a class="reference external" href="https://www.python.org/">Python</a>:</p>
 <blockquote>
 <div><div class="line-block">
@@ -210,32 +234,33 @@ sphinx-alice-theme &lt;version&gt;
 Python to PATH”; however, users can explicitly invoked Python from an absolute
 path (the remainder of these steps will assume Python is available in the path).</p>
 <p>Open a Windows command prompt and invoke the following:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt; python -m pip install sphinx-alice-theme
-&gt; python -m sphinx_alice_theme --version
-sphinx-alice-theme &lt;version&gt;
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;</span> python -m pip install sphinx-alice-theme
+<span class="gp">&gt;</span> python -m sphinx_alice_theme --version
+<span class="go">sphinx-alice-theme ~version~</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="development">
-<h2>development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
 <p>To install the most recent development sources, the following <a class="reference external" href="https://pip.pypa.io/">pip</a> command can
 be used:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install git+https://github.com/jdknight/sphinx-alice-theme.git
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
-
-            <hr/>
 
             
+            
+            <hr/>
+
             <div class="nav-container nav-bottom">
                 
                 <a href="usage.html" class="float-right"
-                        title="usage" accesskey="n" rel="next">Next →</a>
+                        title="Usage" accesskey="n" rel="next">Next →</a>
                 
                 
                 <a href="index.html" class="float-left"
@@ -246,10 +271,11 @@ be used:</p>
 
             <footer>
     
+
+    
     <a href="_sources/install.rst.txt" rel="nofollow">View page source</a>.
         <br />
     
-    &#169; Copyright 2020 James Knight.
         
         Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
     <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
@@ -257,5 +283,7 @@ be used:</p>
         </div>
     </section>
 </div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
 </body>
 </html>

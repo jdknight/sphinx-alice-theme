@@ -1,4 +1,4 @@
-hacking
+Hacking
 #######
 
 Users who want to override specific theme stylings can do so by injecting a

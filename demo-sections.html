@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
-    <title>sections</title>
+    <title>Sections</title>
 
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css" />
     
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
 </head><body>
 <div class="alice-container">
     <nav class="sidebar" aria-label="sidebar">
@@ -47,27 +50,27 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="demo.html">demonstration</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="demo-admonitions.html">admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">auto-extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">bibliographic fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-code.html">code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-download.html">download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-images.html">images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">indentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-lists.html">lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-other.html">other</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">paragraph-level markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-references.html">references</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="demo.html">Demonstration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="demo-admonitions.html">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">Auto-extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">Bibliographic fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-code.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-download.html">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-lists.html">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-other.html">Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">Paragraph-level markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-references.html">References</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">Tables</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
 </ul>
 
         
@@ -75,30 +78,45 @@
     </div>
     
 </nav>
-<nav class="mobilebar" aria-label="mobilebar" id="z">
-    <button id="mobilebar-toggle-menu">&#8676;</button>
-
-    <script>
-    $('#mobilebar-toggle-menu').click(function() {
-        $('#mobilebar-toggle-menu').css('display', 'none');
-        $('#sidebar-top').css('display', 'none');
-        $('nav.sidebar').css('display', 'unset');
-        $('section').css('padding-left', '15rem');
-
-        $(document).on('click', 'a', function() {
-            $('#mobilebar-toggle-menu').css('display', 'unset');
-            $('#sidebar-top').css('display', 'unset');
-            $('nav.sidebar').css('display', 'none');
-            $('section').css('padding-left', '0rem');
-        });
-    });
-    </script>
+<nav class="alice-topbar">
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
 
     
     <a href="index.html"> Alice Theme for Sphinx
     
     </a>
+
+    &nbsp;
 </nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
     <section>
         <div class="alice-content">
             
@@ -106,22 +124,22 @@
                 
                 <div class="nav-top float-right">
                     
-                    <a href="demo-references.html" title="references" accesskey="p">← Previous</a>
+                    <a href="demo-references.html" title="References" accesskey="p">← Previous</a>
                     
                     
                      |
                     
                     
-                    <a href="demo-tables.html" title="tables" accesskey="n">Next →</a>
+                    <a href="demo-tables.html" title="Tables" accesskey="n">Next →</a>
                     
                 </div>
                 
                 <ul class="breadcrumbs">
     <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
     
-    <li><a href="demo.html">demonstration</a> &raquo;</li>
+    <li><a href="demo.html">Demonstration</a> &raquo;</li>
     
-    <li>sections</li>
+    <li>Sections</li>
 </ul>
                 
             </div>
@@ -129,8 +147,8 @@
             <hr/>
             
             
-  <div class="section" id="sections">
-<h1>sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h1>
+  <section id="sections">
+<h1>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fringilla risus at
 neque iaculis aliquet. Donec luctus velit a enim bibendum, ac aliquam nisl
 feugiat. Nam interdum nunc ultricies, tincidunt lectus sit amet, mattis orci.
@@ -141,8 +159,8 @@ quis. Maecenas suscipit erat in dolor iaculis, ac varius metus condimentum. Sed
 vitae risus sed eros dignissim interdum et nec lectus. Nullam viverra interdum
 fermentum. Duis elementum non nisl vitae suscipit. Aliquam erat volutpat.
 Phasellus ut tellus venenatis, aliquet orci sagittis, dictum massa.</p>
-<div class="section" id="section-title">
-<h2>section title<a class="headerlink" href="#section-title" title="Permalink to this headline">¶</a></h2>
+<section id="section-title">
+<h2>Section title<a class="headerlink" href="#section-title" title="Permalink to this headline">¶</a></h2>
 <p>Aliquam ac rhoncus augue. Vestibulum congue leo vitae neque lobortis, mattis
 tempor sem gravida. Proin blandit tortor ipsum, a mattis ligula ultrices vitae.
 Vestibulum bibendum, magna quis venenatis dictum, dolor ipsum egestas erat, sit
@@ -155,8 +173,8 @@ id ante at hendrerit. Etiam efficitur, ex vel scelerisque convallis, nisl lectus
 egestas eros, nec faucibus elit nunc ut neque. Phasellus ut massa posuere,
 auctor dolor non, imperdiet velit. Integer vitae nisl sed enim scelerisque
 interdum.</p>
-<div class="section" id="id1">
-<h3>section title<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<section id="id1">
+<h3>Section title<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Donec vel lacus ultricies, semper nibh nec, pellentesque urna. Phasellus cursus
 diam nunc. Aenean ut aliquet enim. Nullam odio enim, commodo at libero at,
 tincidunt facilisis lacus. Fusce porta tempor tempus. Nam molestie sapien arcu,
@@ -166,8 +184,8 @@ ac mauris non magna facilisis mollis. In luctus quis odio sit amet faucibus.
 Nulla facilisi. Etiam auctor ipsum quis vehicula rutrum. Nulla vitae commodo
 dui, sit amet placerat enim. Cras consequat, orci in ornare mattis, justo justo
 congue augue, vitae sagittis sem dolor nec ipsum.</p>
-<div class="section" id="id2">
-<h4>section title<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<section id="id2">
+<h4>Section title<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>Pellentesque rutrum finibus ligula vel placerat. Donec convallis hendrerit
 dignissim. Ut euismod purus a nisl pharetra commodo. Ut viverra est ante, non
 blandit lectus porta a. Nam ligula nisl, ultrices et elit eu, auctor egestas
@@ -176,8 +194,8 @@ sapien et vulputate. Aliquam posuere condimentum imperdiet. Donec dapibus eros
 non lorem iaculis, ac tempus metus semper. Phasellus a lorem orci. Vestibulum
 pharetra scelerisque dolor in dignissim. Nulla in ultricies elit, sed luctus mi.
 Aliquam aliquam diam molestie magna mollis, ac rutrum diam auctor.</p>
-<div class="section" id="id3">
-<h5>section title<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
+<section id="id3">
+<h5>Section title<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
 <p>Duis vitae egestas dolor. Quisque ultricies maximus ipsum in tempor. Donec nibh
 metus, lacinia non eros eget, gravida lobortis ligula. Sed nec consectetur
 neque, vulputate pellentesque lectus. Pellentesque gravida ut odio eu viverra.
@@ -185,8 +203,8 @@ Duis at sollicitudin libero. Aenean et dapibus urna, nec finibus nibh. In
 sodales semper luctus. Sed at dignissim nunc, sed tincidunt quam. Donec pretium
 felis auctor nibh volutpat, vel elementum lorem congue. Vestibulum ante ipsum
 primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-<div class="section" id="id4">
-<h6>section title<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h6>
+<section id="id4">
+<h6>Section title<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h6>
 <p>Donec vitae venenatis lacus. Duis vitae augue semper, dapibus erat quis, tempor
 arcu. Vivamus nec augue at nunc mollis gravida. Vestibulum dapibus aliquet metus
 eget dapibus. Ut at euismod massa, nec rhoncus tortor. Aliquam dapibus eu arcu
@@ -196,36 +214,38 @@ volutpat nibh nunc, in feugiat nisi rutrum vitae. Donec sit amet congue eros.
 Sed fringilla leo vel lectus hendrerit rhoncus. Cras euismod bibendum iaculis.
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
 urpis egestas. Curabitur consequat vestibulum justo id sagittis.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
 
 
-
-            <hr/>
 
             
+            
+            <hr/>
+
             <div class="nav-container nav-bottom">
                 
                 <a href="demo-tables.html" class="float-right"
-                        title="tables" accesskey="n" rel="next">Next →</a>
+                        title="Tables" accesskey="n" rel="next">Next →</a>
                 
                 
                 <a href="demo-references.html" class="float-left"
-                        title="references" accesskey="p" rel="prev">← Previous</a>
+                        title="References" accesskey="p" rel="prev">← Previous</a>
                 
             </div>
             
 
             <footer>
     
+
+    
     <a href="_sources/demo-sections.rst.txt" rel="nofollow">View page source</a>.
         <br />
     
-    &#169; Copyright 2020 James Knight.
         
         Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
     <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
@@ -233,5 +253,7 @@ urpis egestas. Curabitur consequat vestibulum justo id sagittis.</p>
         </div>
     </section>
 </div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
 </body>
 </html>

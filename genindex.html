@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="" >
 <head>
@@ -11,12 +10,15 @@
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css" />
     
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
 </head><body>
 <div class="alice-container">
     <nav class="sidebar" aria-label="sidebar">
@@ -48,11 +50,11 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demo.html">demonstration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
 </ul>
 
         
@@ -60,30 +62,45 @@
     </div>
     
 </nav>
-<nav class="mobilebar" aria-label="mobilebar" id="z">
-    <button id="mobilebar-toggle-menu">&#8676;</button>
-
-    <script>
-    $('#mobilebar-toggle-menu').click(function() {
-        $('#mobilebar-toggle-menu').css('display', 'none');
-        $('#sidebar-top').css('display', 'none');
-        $('nav.sidebar').css('display', 'unset');
-        $('section').css('padding-left', '15rem');
-
-        $(document).on('click', 'a', function() {
-            $('#mobilebar-toggle-menu').css('display', 'unset');
-            $('#sidebar-top').css('display', 'unset');
-            $('nav.sidebar').css('display', 'none');
-            $('section').css('padding-left', '0rem');
-        });
-    });
-    </script>
+<nav class="alice-topbar">
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
 
     
     <a href="index.html"> Alice Theme for Sphinx
     
     </a>
+
+    &nbsp;
 </nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
     <section>
         <div class="alice-content">
             
@@ -144,8 +161,13 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="demo-auto.html#module-docutils">docutils (module)</a>
+      <li>
+    docutils
+
+      <ul>
+        <li><a href="demo-auto.html#module-docutils">module</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -170,14 +192,13 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="demo-auto.html#docutils.VersionInfo.major">major (docutils.VersionInfo attribute)</a>
+      <li>
+    module
+
+      <ul>
+        <li><a href="demo-auto.html#module-docutils">docutils</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="demo-auto.html#docutils.VersionInfo.micro">micro (docutils.VersionInfo attribute)</a>
-</li>
-      <li><a href="demo-auto.html#docutils.VersionInfo.minor">minor (docutils.VersionInfo attribute)</a>
-</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -195,19 +216,11 @@
       <li><a href="demo-auto.html#docutils.SettingsSpec.relative_path_settings">relative_path_settings (docutils.SettingsSpec attribute)</a>
 </li>
   </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="demo-auto.html#docutils.VersionInfo.release">release (docutils.VersionInfo attribute)</a>
-</li>
-      <li><a href="demo-auto.html#docutils.VersionInfo.releaselevel">releaselevel (docutils.VersionInfo attribute)</a>
-</li>
-  </ul></td>
 </tr></table>
 
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="demo-auto.html#docutils.VersionInfo.serial">serial (docutils.VersionInfo attribute)</a>
-</li>
       <li><a href="demo-auto.html#docutils.nodes.serial_escape">serial_escape() (in module docutils.nodes)</a>
 </li>
       <li><a href="demo-auto.html#docutils.SettingsSpec.settings_default_overrides">settings_default_overrides (docutils.SettingsSpec attribute)</a>
@@ -262,13 +275,16 @@
 
 
 
-            <hr/>
-
             
 
             <footer>
     
-    &#169; Copyright 2020 James Knight.
+        
+        <hr/>
+        
+    
+
+    
         
         Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
     <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
@@ -276,5 +292,7 @@
         </div>
     </section>
 </div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
 </body>
 </html>

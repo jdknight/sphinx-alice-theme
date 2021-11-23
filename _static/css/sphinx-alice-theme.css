@@ -7,10 +7,16 @@ body {
     overflow-y: scroll;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14 {
     clear: both;
     color: #000;
     overflow-wrap: break-word;
+    padding-left: 3px;
+    transition: padding-left 0.1s;
 }
 
 h5, h6 {
@@ -53,6 +59,11 @@ a:hover:not(.literal-link) {
     text-decoration: underline;
 }
 
+a.literal-link > code:hover {
+    border-color: #0367d7;
+    transition: border-color 0.7s linear;
+}
+
 a.headerlink {
     font-size: .75em;
     padding-left: 2px;
@@ -74,6 +85,28 @@ h4:hover .headerlink,
 h5:hover .headerlink,
 h5:hover .headerlink {
     visibility: visible;
+}
+
+div:target > h1:first-of-type,
+div:target > h2:first-of-type,
+div:target > h3:first-of-type,
+div:target > h4:first-of-type,
+div:target > h5:first-of-type,
+div:target > h6:first-of-type {
+    background-color: gold;
+    padding-left: 10px;
+    transition: padding-left 0.1s;
+}
+
+section:target > h1:first-of-type,
+section:target > h2:first-of-type,
+section:target > h3:first-of-type,
+section:target > h4:first-of-type,
+section:target > h5:first-of-type,
+section:target > h6:first-of-type {
+    background-color: gold;
+    padding-left: 10px;
+    transition: padding-left 0.1s;
 }
 
 h1 a.toc-backref,
@@ -127,14 +160,39 @@ hr {
     clear: both;
 }
 
+img {
+    max-width: 100%;
+}
+
+li p {
+   margin: 0;
+}
+
+li.active > :first-child {
+    font-weight: bold !important;
+}
+
 nav.sidebar {
+    background-color: #fdfdfd;
     border-right: 1px solid #eaecef;
-    position: fixed;
-    top: 2.2rem;
-    left: 0;
     bottom: 0;
-    width: 15rem;
+    left: 0;
     overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: 15rem;
+    z-index: 3;
+}
+
+#sidebar-bg {
+    background-color: rgba(0,0,0,.8);
+    display: none;
+    height: 100%;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 nav.sidebar ul {
@@ -147,7 +205,7 @@ nav.sidebar ul li a {
     color: unset;
     display: block;
     font-weight: 400;
-    line-height: 2em;
+    line-height: 2.2em;
 
     white-space: nowrap;
     overflow: hidden;
@@ -162,13 +220,11 @@ nav.sidebar ul li a.current {
     font-weight: 600;
 }
 
-nav.sidebar .toctree-l1.current a {
-    border-left: .3rem solid #999;
+nav.sidebar .toctree-l1.current > a {
 }
 
 nav.sidebar .toctree-l1 a.current {
-    border-left-color: #333;
-    border-left-width: .6rem;
+    border-left: .3rem solid #333;
 }
 
 nav.sidebar .toctree-l1 a {
@@ -187,24 +243,30 @@ nav.sidebar .toctree-l4 a {
     padding-left: 20px;
 }
 
-nav.mobilebar {
-    background-color: #f0f0f0;
+nav.alice-topbar {
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
     display: none;
     margin: 0;
     padding: 15px;
+    position: sticky !important;
+    top: 0 !important;
+    height: 20px;
+    white-space: nowrap;
 }
 
-#mobilebar-toggle-menu {
+#alice-topbar-toggle-menu {
     background-color: #fff;
     border: 1px solid #ccc;
+    border-radius: 4px 10px;
     cursor: pointer;
-    float: left;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
 }
 
-section {
+.alice-container > section {
     padding-left: 15rem;
+    transition: padding-left 0.1s;
 }
 
 table {
@@ -246,7 +308,7 @@ table p + p {
 }
 
 .row-odd {
-    background-color: #f8f8f8;
+    background-color: #fafafa;
 }
 
 ul.breadcrumbs li {
@@ -296,16 +358,20 @@ ul.breadcrumbs li {
     border-color: #c8ffbf;
 }
 
-
 div > code.literal,
 a > code.literal,
-p > code.literal,
-.option {
+p > code.literal {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 2px;
     border-radius: 2px;
     color: #c4254f;
+    font-size: 0.94em;
+    padding: .18rem .49rem;
+    transition: border-color 0.3s linear;
+}
+
+.option {
     font-size: 0.94em;
     padding: .18rem .49rem;
 }
@@ -329,12 +395,16 @@ code.download {
     font-weight: 700;
 }
 
-#sidebar-top, .mobilebar {
+#sidebar-top, .alice-topbar {
     display: block;
     font-size: 1.2em;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+#sidebar-top {
+    padding-top: 1em;
 }
 
 #search {
@@ -361,14 +431,6 @@ code.download {
     vertical-align: baseline;
 }
 
-.footnote-reference.brackets::before {
-    content: '[';
-}
-
-.footnote-reference.brackets::after {
-    content: ']';
-}
-
 .breadcrumbs {
     padding-left: 0;
 }
@@ -383,14 +445,19 @@ code.download {
 }
 
 .nav-toctree {
-    padding: 1.2rem 0;
-    margin: 0;
+    font-size: 14px;
     list-style-type: none;
+    margin: 0;
+    padding: 1.2rem 0.5rem;
+}
+
+.nav-toctree li ul {
+    border-left: 1px solid #ccc;
 }
 
 .toctree-wrapper li {
-   margin-top: 5px; 
-   margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .align-left:not(table) {
@@ -410,8 +477,8 @@ code.download {
 
 .align-right {
     float: right;
-    text-align: right;
     margin-bottom: 10px;
+    text-align: right;
 }
 
 .float-left {
@@ -437,15 +504,19 @@ pre {
 
 @media (max-width: 1000px) {
 
-nav.mobilebar {
-    display: block;
+[id] {
+	scroll-margin-top: 70px;
+}
+
+nav.alice-topbar {
+    display: flex;
 }
 
 nav.sidebar {
     display: none;
 }
 
-section {
+.alice-container > section {
     padding-left: 0rem;
 }
 
@@ -455,7 +526,6 @@ section {
 
 pre {
     border-radius: 0px;
-    padding: 2px;
 }
 
 h1 {
@@ -478,19 +548,73 @@ h4, h5, h6 {
     line-height: 0.7rem;
 }
 
-.alice-content {
-    padding-left: 5px;
-    padding-right: 5px;
+table col {
+    width: unset;
 }
 
 .nav-top {
     float: unset;
-    text-align: center;
     margin-top: 1em;
+    text-align: center;
 }
 
 }
 
 .highlight {
     background: unset !important;
+}
+
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    pre {
+        background-color: #fff;
+        border: 0.5px solid #000;
+        overflow: visible;
+        page-break-inside: avoid;
+        white-space: pre-wrap;
+    }
+
+    table {
+        page-break-inside: auto;
+        width: 100%;
+    }
+
+    table col {
+        width: unset;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+
+    tfoot {
+        display: table-footer-group;
+    }
+
+    div > code.literal,
+    a > code.literal,
+    p > code.literal {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    nav.alice-topbar, nav.sidebar {
+        display: none;
+    }
+
+    .admonition {
+        page-break-inside: avoid;
+    }
+
+    .row-odd {
+        background-color: #fff;
+    }
 }

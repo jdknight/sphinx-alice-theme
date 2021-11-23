@@ -1,6 +1,6 @@
 .. currentmodule:: docutils
 
-auto-extensions
+Auto-extensions
 ===============
 
 .. automodule:: docutils

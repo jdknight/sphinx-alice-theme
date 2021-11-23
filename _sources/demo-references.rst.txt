@@ -1,11 +1,11 @@
-references
+References
 ==========
 
 This is a link_ to: https://www.example.com
 
 .. _link: https://www.example.com
 
-citations
+Citations
 ---------
 
 A page can have multiple `citations`_ [CIT2001]_, and it does not matter on the
@@ -43,7 +43,7 @@ built [CIT2002]_.
 .. [CIT2003] Another citation example.
 .. [CIT2004] The last citation example.
 
-footnotes
+Footnotes
 ---------
 
 There are various types of footnote methods styles that can be applied. A

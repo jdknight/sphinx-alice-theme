@@ -1,4 +1,4 @@
-bibliographic fields
+Bibliographic fields
 ====================
 
 :Author: Jane Smith

@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
-    <title>lists</title>
+    <title>Lists</title>
 
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css" />
     
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
 </head><body>
 <div class="alice-container">
     <nav class="sidebar" aria-label="sidebar">
@@ -47,27 +50,27 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="demo.html">demonstration</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="demo-admonitions.html">admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">auto-extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">bibliographic fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-code.html">code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-download.html">download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-images.html">images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">indentation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-other.html">other</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">paragraph-level markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-references.html">references</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-sections.html">sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="demo.html">Demonstration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="demo-admonitions.html">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">Auto-extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">Bibliographic fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-code.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-download.html">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-images.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">Indentation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-other.html">Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">Paragraph-level markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-references.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-sections.html">Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">Tables</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
 </ul>
 
         
@@ -75,30 +78,45 @@
     </div>
     
 </nav>
-<nav class="mobilebar" aria-label="mobilebar" id="z">
-    <button id="mobilebar-toggle-menu">&#8676;</button>
-
-    <script>
-    $('#mobilebar-toggle-menu').click(function() {
-        $('#mobilebar-toggle-menu').css('display', 'none');
-        $('#sidebar-top').css('display', 'none');
-        $('nav.sidebar').css('display', 'unset');
-        $('section').css('padding-left', '15rem');
-
-        $(document).on('click', 'a', function() {
-            $('#mobilebar-toggle-menu').css('display', 'unset');
-            $('#sidebar-top').css('display', 'unset');
-            $('nav.sidebar').css('display', 'none');
-            $('section').css('padding-left', '0rem');
-        });
-    });
-    </script>
+<nav class="alice-topbar">
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
 
     
     <a href="index.html"> Alice Theme for Sphinx
     
     </a>
+
+    &nbsp;
 </nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
     <section>
         <div class="alice-content">
             
@@ -106,22 +124,22 @@
                 
                 <div class="nav-top float-right">
                     
-                    <a href="demo-indentation.html" title="indentation" accesskey="p">← Previous</a>
+                    <a href="demo-indentation.html" title="Indentation" accesskey="p">← Previous</a>
                     
                     
                      |
                     
                     
-                    <a href="demo-markup.html" title="markup" accesskey="n">Next →</a>
+                    <a href="demo-markup.html" title="Markup" accesskey="n">Next →</a>
                     
                 </div>
                 
                 <ul class="breadcrumbs">
     <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
     
-    <li><a href="demo.html">demonstration</a> &raquo;</li>
+    <li><a href="demo.html">Demonstration</a> &raquo;</li>
     
-    <li>lists</li>
+    <li>Lists</li>
 </ul>
                 
             </div>
@@ -129,10 +147,10 @@
             <hr/>
             
             
-  <div class="section" id="lists">
-<h1>lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="bullet-lists">
-<h2>bullet lists<a class="headerlink" href="#bullet-lists" title="Permalink to this headline">¶</a></h2>
+  <section id="lists">
+<h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
+<section id="bullet-lists">
+<h2>Bullet lists<a class="headerlink" href="#bullet-lists" title="Permalink to this headline">¶</a></h2>
 <p>The following is an example of bullet lists. Each list item should be tightly
 compacted.</p>
 <ul class="simple">
@@ -202,9 +220,9 @@ multiple blocks.</p>
 </li>
 </ul>
 <p>This paragraph is not part of the list.</p>
-</div>
-<div class="section" id="enumerated-lists">
-<h2>enumerated lists<a class="headerlink" href="#enumerated-lists" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="enumerated-lists">
+<h2>Enumerated lists<a class="headerlink" href="#enumerated-lists" title="Permalink to this headline">¶</a></h2>
 <p>Here is an example of enumerated lists. Each list item should be tightly
 compacted.</p>
 <ol class="arabic simple">
@@ -269,9 +287,9 @@ multiple blocks.</p>
 </ol>
 </li>
 </ol>
-</div>
-<div class="section" id="definition-lists">
-<h2>definition lists<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="definition-lists">
+<h2>Definition lists<a class="headerlink" href="#definition-lists" title="Permalink to this headline">¶</a></h2>
 <p>The following is an example of definition lists. A user should be able to
 easily see a term entry and an associated description for the term. Classifiers
 may also exist for a term and should be presented along side it.</p>
@@ -286,13 +304,13 @@ may also exist for a term and should be presented along side it.</p>
 <dt>term 4<span class="classifier">classifier one</span><span class="classifier">classifier two</span></dt><dd><p>Vivamus vel dolor eget mauris mollis dictum.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="glossary">
-<h2>glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
 <p>Sphinx defines glossary markup which is like a definition list; however, a
 glossary provides referenceable terms.</p>
 <dl class="glossary simple">
-<dt id="term-glossary-item-01">glossary-item-01</dt><dd><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec velit
+<dt id="term-glossary-item-01">glossary-item-01<a class="headerlink" href="#term-glossary-item-01" title="Permalink to this term">¶</a></dt><dd><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec velit
 mauris. Ut eget enim at turpis semper finibus vel eget lorem. Mauris
 metus ligula, scelerisque eget accumsan non, maximus in massa. In eget
 ullamcorper lectus, quis dignissim quam. Nulla viverra, purus in gravida
@@ -302,7 +320,7 @@ efficitur velit bibendum ultrices. Quisque id nisi magna. Ut porta
 mauris velit, ut varius ligula rutrum sit amet. Praesent sagittis
 egestas ex, consectetur porta felis egestas ac. Quisque vitae eros felis.</p>
 </dd>
-<dt id="term-glossary-item-02">glossary-item-02</dt><dd><p>Cras vehicula rutrum nibh. Nullam mollis consequat fermentum. Praesent
+<dt id="term-glossary-item-02">glossary-item-02<a class="headerlink" href="#term-glossary-item-02" title="Permalink to this term">¶</a></dt><dd><p>Cras vehicula rutrum nibh. Nullam mollis consequat fermentum. Praesent
 dapibus, neque sed ultrices elementum, orci dolor sollicitudin enim, id
 volutpat dolor ligula eu urna. Fusce eu venenatis est. Morbi rutrum mi
 nisl, quis mattis est congue vitae. Duis at dui sit amet ex pulvinar
@@ -313,16 +331,16 @@ laoreet. Proin rutrum condimentum purus at ultrices. Fusce convallis felis
 id ex viverra imperdiet. Nullam eget ipsum ipsum. Vestibulum eu nibh
 dictum, pellentesque nibh ac, aliquet purus.</p>
 </dd>
-<dt id="term-glossary-item-03a">glossary-item-03a</dt><dt id="term-glossary-item-03b">glossary-item-03b</dt><dd><p>Pellentesque dictum ornare arcu a interdum. Mauris pellentesque commodo
+<dt id="term-glossary-item-03a">glossary-item-03a<a class="headerlink" href="#term-glossary-item-03a" title="Permalink to this term">¶</a></dt><dt id="term-glossary-item-03b">glossary-item-03b<a class="headerlink" href="#term-glossary-item-03b" title="Permalink to this term">¶</a></dt><dd><p>Pellentesque dictum ornare arcu a interdum. Mauris pellentesque commodo
 lobortis. Quisque non lorem felis. Integer quis bibendum purus. Maecenas
 cursus, odio nec ultricies vulputate, orci urna vulputate neque, vel
 placerat sapien nisl vitae nibh. Ut aliquam mauris cursus varius
 hendrerit. Donec justo odio, viverra a mi eu, egestas sollicitudin est.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="list-table">
-<h2>list table<a class="headerlink" href="#list-table" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="list-table">
+<h2>List table<a class="headerlink" href="#list-table" title="Permalink to this headline">¶</a></h2>
 <p>The following is an example of a list table:</p>
 <table class="docutils align-default" id="id1">
 <caption><span class="caption-text">name1</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
@@ -385,9 +403,9 @@ hendrerit. Donec justo odio, viverra a mi eu, egestas sollicitudin est.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="option-lists">
-<h2>option lists<a class="headerlink" href="#option-lists" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="option-lists">
+<h2>Option lists<a class="headerlink" href="#option-lists" title="Permalink to this headline">¶</a></h2>
 <p>The following is an example of an option lists for a (Linux) <code class="docutils literal notranslate"><span class="pre">ping</span></code>
 command:</p>
 <dl class="option-list">
@@ -477,45 +495,47 @@ timeout in absence of any responses, otherwise ping waits for two
 RTTs.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="production-list">
-<h2>production list<a class="headerlink" href="#production-list" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="production-list">
+<h2>Production list<a class="headerlink" href="#production-list" title="Permalink to this headline">¶</a></h2>
 <p>The following is an example of a production list:</p>
 <pre>
-<strong id="grammar-token-try-stmt">try_stmt </strong> ::=  try1_stmt | try2_stmt
-<strong id="grammar-token-try1-stmt">try1_stmt</strong> ::=  &quot;try&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>
+<strong id="grammar-token-try_stmt"><span id="grammar-token-try-stmt"></span>try_stmt </strong> ::=  try1_stmt | try2_stmt
+<strong id="grammar-token-try1_stmt"><span id="grammar-token-try1-stmt"></span>try1_stmt</strong> ::=  &quot;try&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>
                (&quot;except&quot; [<code class="xref docutils literal notranslate"><span class="pre">expression</span></code> [&quot;,&quot; <code class="xref docutils literal notranslate"><span class="pre">target</span></code>]] &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>)+
                [&quot;else&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>]
                [&quot;finally&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>]
-<strong id="grammar-token-try2-stmt">try2_stmt</strong> ::=  &quot;try&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>
+<strong id="grammar-token-try2_stmt"><span id="grammar-token-try2-stmt"></span>try2_stmt</strong> ::=  &quot;try&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>
                &quot;finally&quot; &quot;:&quot; <code class="xref docutils literal notranslate"><span class="pre">suite</span></code>
 </pre>
-</div>
-</div>
+</section>
+</section>
 
 
-
-            <hr/>
 
             
+            
+            <hr/>
+
             <div class="nav-container nav-bottom">
                 
                 <a href="demo-markup.html" class="float-right"
-                        title="markup" accesskey="n" rel="next">Next →</a>
+                        title="Markup" accesskey="n" rel="next">Next →</a>
                 
                 
                 <a href="demo-indentation.html" class="float-left"
-                        title="indentation" accesskey="p" rel="prev">← Previous</a>
+                        title="Indentation" accesskey="p" rel="prev">← Previous</a>
                 
             </div>
             
 
             <footer>
     
+
+    
     <a href="_sources/demo-lists.rst.txt" rel="nofollow">View page source</a>.
         <br />
     
-    &#169; Copyright 2020 James Knight.
         
         Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
     <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
@@ -523,5 +543,7 @@ RTTs.</p>
         </div>
     </section>
 </div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
 </body>
 </html>

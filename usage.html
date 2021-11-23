@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
-    <title>usage</title>
+    <title>Usage</title>
 
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css" />
     
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
 </head><body>
 <div class="alice-container">
     <nav class="sidebar" aria-label="sidebar">
@@ -47,11 +50,11 @@
         
         
         <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demo.html">demonstration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
 </ul>
 
         
@@ -59,30 +62,45 @@
     </div>
     
 </nav>
-<nav class="mobilebar" aria-label="mobilebar" id="z">
-    <button id="mobilebar-toggle-menu">&#8676;</button>
-
-    <script>
-    $('#mobilebar-toggle-menu').click(function() {
-        $('#mobilebar-toggle-menu').css('display', 'none');
-        $('#sidebar-top').css('display', 'none');
-        $('nav.sidebar').css('display', 'unset');
-        $('section').css('padding-left', '15rem');
-
-        $(document).on('click', 'a', function() {
-            $('#mobilebar-toggle-menu').css('display', 'unset');
-            $('#sidebar-top').css('display', 'unset');
-            $('nav.sidebar').css('display', 'none');
-            $('section').css('padding-left', '0rem');
-        });
-    });
-    </script>
+<nav class="alice-topbar">
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
 
     
     <a href="index.html"> Alice Theme for Sphinx
     
     </a>
+
+    &nbsp;
 </nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
     <section>
         <div class="alice-content">
             
@@ -90,20 +108,20 @@
                 
                 <div class="nav-top float-right">
                     
-                    <a href="install.html" title="installation" accesskey="p">← Previous</a>
+                    <a href="install.html" title="Installation" accesskey="p">← Previous</a>
                     
                     
                      |
                     
                     
-                    <a href="options.html" title="options" accesskey="n">Next →</a>
+                    <a href="options.html" title="Options" accesskey="n">Next →</a>
                     
                 </div>
                 
                 <ul class="breadcrumbs">
     <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
     
-    <li>usage</li>
+    <li>Usage</li>
 </ul>
                 
             </div>
@@ -111,8 +129,8 @@
             <hr/>
             
             
-  <div class="section" id="usage">
-<h1>usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
 <p>For an existing Sphinx documentation set, the Alice theme can be applied by
 configuring the <a class="literal-link reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a> value to <code class="docutils literal notranslate"><span class="pre">sphinx_alice_theme</span></code>. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_alice_theme&#39;</span>
@@ -121,42 +139,44 @@ configuring the <a class="literal-link reference external" href="http://www.sphi
 <p>For users who wish to test this theme against their documentation set without
 modifying a configuration file, the following can be invoked for the <code class="docutils literal notranslate"><span class="pre">html</span></code>
 builder:</p>
-<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -b html . _build/html -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-build -b html . _build/html -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
 <span class="go">   (or)</span>
-<span class="gp">$</span> python -m sphinx -b html . _build/html -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
+<span class="gp">$ </span>python -m sphinx -b html . _build/html -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
 </pre></div>
 </div>
 <p>Or the following for the <code class="docutils literal notranslate"><span class="pre">singlehtml</span></code> builder:</p>
-<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -b singlehtml . _build/singlehtml -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-build -b singlehtml . _build/singlehtml -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
 <span class="go">   (or)</span>
-<span class="gp">$</span> python -m sphinx -b singlehtml . _build/singlehtml -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
+<span class="gp">$ </span>python -m sphinx -b singlehtml . _build/singlehtml -E -a -D <span class="nv">html_theme</span><span class="o">=</span>sphinx_alice_theme
 </pre></div>
 </div>
-</div>
+</section>
 
 
-
-            <hr/>
 
             
+            
+            <hr/>
+
             <div class="nav-container nav-bottom">
                 
                 <a href="options.html" class="float-right"
-                        title="options" accesskey="n" rel="next">Next →</a>
+                        title="Options" accesskey="n" rel="next">Next →</a>
                 
                 
                 <a href="install.html" class="float-left"
-                        title="installation" accesskey="p" rel="prev">← Previous</a>
+                        title="Installation" accesskey="p" rel="prev">← Previous</a>
                 
             </div>
             
 
             <footer>
     
+
+    
     <a href="_sources/usage.rst.txt" rel="nofollow">View page source</a>.
         <br />
     
-    &#169; Copyright 2020 James Knight.
         
         Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
     <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
@@ -164,5 +184,7 @@ builder:</p>
         </div>
     </section>
 </div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
 </body>
 </html>

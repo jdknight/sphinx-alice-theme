@@ -1,4 +1,4 @@
-other
+Other
 =====
 
 The follow shows a uncategorized markup defined in reStructuredText and/or
@@ -7,7 +7,7 @@ Sphinx handled by the Sphinx engine.
 .. contents::
     :local:
 
-attribution (in block quote)
+Attribution (in block quote)
 ----------------------------
 
 When a reStructuredText block quote contains an attribution, the content
@@ -17,7 +17,7 @@ will be captured inside a Confluence quote block:
 
     -- Sherlock Holmes
 
-epigraph, highlight and pull-quote
+Epigraph, Highlight and Pull-quote
 ----------------------------------
 
 reStructuredText's epigraphs, highlights and pull-quotes should be
@@ -41,7 +41,7 @@ captured inside a Confluence quote block:
 
     -- Buckaroo Banzai
 
-transition
+Transition
 ----------
 
 A transition (or horizontal rule) can be used to seperate content.

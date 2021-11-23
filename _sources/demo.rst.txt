@@ -1,4 +1,4 @@
-demonstration
+Demonstration
 #############
 
 This document helps demonstration a series of reStructuredText/Sphinx
