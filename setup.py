@@ -40,6 +40,7 @@ setup(
     ],
     license='BSD-2-Clause',
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     name='sphinx-alice-theme',
     packages=find_packages(exclude=['tests*']),
     platforms='any',
