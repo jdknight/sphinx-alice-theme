@@ -5,7 +5,9 @@ from docutils import nodes
 from os import path
 from sphinx.transforms.post_transforms import SphinxPostTransform
 
+
 __version__ = '0.1.0-dev0'
+
 
 class AliceThemeTransform(SphinxPostTransform):
     default_priority = 400
@@ -22,6 +24,7 @@ class AliceThemeTransform(SphinxPostTransform):
             elif isinstance(next(iter(node.children), None), nodes.literal):
                 classes = node.get('classes', [])
                 classes.append('literal-link')
+
 
 def setup(app):
     app.add_html_theme('sphinx_alice_theme',

@@ -6,8 +6,10 @@ from setuptools import find_packages
 from setuptools import setup
 import os
 
+
 def read(name):
     return open(os.path.join(os.path.dirname(__file__), name)).read()
+
 
 setup(
     classifiers=[
@@ -28,10 +30,10 @@ setup(
         'Topic :: Documentation',
     ],
     description='Provides the Alice theme for Sphinx projects.',
-    entry_points = {
+    entry_points={
         'sphinx.html_themes': [
             'sphinx_alice_theme = sphinx_alice_theme',
-        ]
+        ],
     },
     include_package_data=True,
     install_requires=[

@@ -5,6 +5,7 @@ from . import __version__
 import argparse
 import sys
 
+
 def main():
     parser = argparse.ArgumentParser(prog='sphinx-alice-theme',
         description='Alice Theme for Sphinx')
@@ -14,6 +15,7 @@ def main():
     parser.parse_args()
     parser.print_help()
     return 0
+
 
 if __name__ == '__main__':
     sys.exit(main())
