@@ -1,4 +1,4 @@
-contributing
+Contributing
 ############
 
 Users can contribute to this project by reporting issues or submitting changes.
