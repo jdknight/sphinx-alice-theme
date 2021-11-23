@@ -17,6 +17,14 @@ To verify the package has been installed, the following command can be used:
         (or)
     python -m sphinx_alice_theme --version
 
+This theme can be uninstalled with the following command:
+
+.. code-block:: shell
+
+    pip uninstall sphinx-alice-theme
+        (or)
+    python -m pip uninstall sphinx-alice-theme
+
 Quick-start
 -----------
 
