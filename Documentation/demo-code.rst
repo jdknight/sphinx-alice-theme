@@ -1,8 +1,6 @@
 Code
 ====
 
-
-
 .. code-block:: python
 
     def main():
