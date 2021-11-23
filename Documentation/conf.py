@@ -14,8 +14,6 @@ master_doc = 'index'
 
 # meta
 project = 'Alice Theme for Sphinx'
-copyright = '2020 James Knight'
-author = 'James Knight'
 
 # sphinx extensions
 extensions = [
@@ -29,6 +27,8 @@ html_theme_path = ['../']
 html_theme_options = {
     'navigation_depth': 2,
 }
+html_show_copyright = False
+
 html_extra_path = [
     'assets/overview.png',
     '.nojekyll',
