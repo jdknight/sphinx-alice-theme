@@ -13,7 +13,7 @@ def read(name):
 
 setup(
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Sphinx :: Theme',
         'Framework :: Sphinx',
