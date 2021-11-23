@@ -68,7 +68,7 @@ prev_next_buttons_location
 
 Configures how "Next" and "Previous" links (if any) should be rendered in the
 final documentation set. Permitted values include ``both``, ``top``, ``bottom``
-or ``None``. By default, these links are included in ``both`` the top and the
+or ``none``. By default, these links are included in ``both`` the top and the
 bottom of each page.
 
 .. code-block:: python
