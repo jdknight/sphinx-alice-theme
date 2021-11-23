@@ -109,11 +109,11 @@ path (the remainder of these steps will assume Python is available in the path).
 
 Open a Windows command prompt and invoke the following:
 
-.. code-block:: shell
+.. code-block:: doscon
 
     > python -m pip install sphinx-alice-theme
     > python -m sphinx_alice_theme --version
-    sphinx-alice-theme <version>
+    sphinx-alice-theme ~version~
 
 Development
 -----------
