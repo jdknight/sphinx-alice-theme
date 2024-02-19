@@ -1,5 +1,5 @@
-Development
-===========
+0.3.0 (2024-02-19)
+==================
 
 - Add support for ``navigation_with_keys``
 - Reduce spacing after admonition titles
