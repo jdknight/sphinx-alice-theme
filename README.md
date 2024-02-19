@@ -1,7 +1,9 @@
 Alice Theme for Sphinx
 ======================
 
-[![pip Version](https://img.shields.io/pypi/v/sphinx-alice-theme.svg)][PyPi] [![Build](https://github.com/jdknight/sphinx-alice-theme/workflows/build/badge.svg?branch=master)][Build] [![Documentation](https://github.com/jdknight/sphinx-alice-theme/workflows/docs/badge.svg?branch=master)][Documentation]
+[![pip Version](https://img.shields.io/pypi/v/sphinx-alice-theme.svg)][PyPi]
+[![Build](https://github.com/jdknight/sphinx-alice-theme/actions/workflows/build.yml/badge.svg)][Build]
+[![Documentation](https://github.com/jdknight/sphinx-alice-theme/actions/workflows/docs.yml/badge.svg)][Documentation]
 
 Provides the Alice theme for [Sphinx][Sphinx] projects.
 
@@ -57,7 +59,7 @@ Dependencies
 - [Gumshoe][Gumshoe]
 
 
-[Build]: https://github.com/jdknight/sphinx-alice-theme/actions?query=workflow%3Abuild
+[Build]: https://github.com/jdknight/sphinx-alice-theme/actions/workflows/build.yml
 [Documentation]: https://sphinx-alice-theme.jdknight.me/
 [Gumshoe]: https://github.com/cferdinandi/gumshoe
 [PyPi]: https://pypi.python.org/pypi/sphinx-alice-theme
