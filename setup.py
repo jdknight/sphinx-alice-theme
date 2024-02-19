@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# Copyright 2020-2021 James Knight
+# Copyright James Knight
 
 from setuptools import find_packages
 from setuptools import setup
