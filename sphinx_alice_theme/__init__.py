@@ -12,7 +12,7 @@ class AliceThemeTransform(SphinxPostTransform):
     default_priority = 400
 
     def run(self, **kwargs):
-        for node in self.document.traverse(nodes.reference):
+        for node in self.document.findall(nodes.reference):
             next_node = next(iter(node.children), None)
 
             # tag references with `inline` child with a `inline-link` class
