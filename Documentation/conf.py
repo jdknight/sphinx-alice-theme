@@ -22,6 +22,7 @@ html_theme = 'sphinx_alice_theme'
 html_theme_path = ['../']
 html_theme_options = {
     'navigation_depth': 2,
+    'navigation_with_keys': True,
 }
 html_show_copyright = False
 
