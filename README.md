@@ -64,5 +64,5 @@ Dependencies
 [Gumshoe]: https://github.com/cferdinandi/gumshoe
 [PyPi]: https://pypi.python.org/pypi/sphinx-alice-theme
 [Sphinx]: https://www.sphinx-doc.org/
-[html_theme]: http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme
+[html_theme]: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme
 [pip]: https://pip.pypa.io/
