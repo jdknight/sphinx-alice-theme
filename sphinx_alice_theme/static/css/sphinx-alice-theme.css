@@ -358,6 +358,10 @@ ul.breadcrumbs li {
     border-color: #c8ffbf;
 }
 
+.citation > p {
+    margin-left: 30px;
+}
+
 div > code.literal,
 a > code.literal,
 p > code.literal {
@@ -435,9 +439,19 @@ code.download {
     padding-left: 0;
 }
 
-.footnote dt {
+.footnote dt, .footnote > span {
     float: left;
     padding-right: 5px;
+}
+
+.footnote > p {
+    margin-left: 30px;
+}
+
+.footnote > .backrefs {
+    font-size: 75%;
+    position: relative;
+    top: -0.5em;
 }
 
 .nav-container:after {

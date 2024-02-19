@@ -12,17 +12,6 @@ class AliceThemeTransform(SphinxPostTransform):
     default_priority = 400
 
     def run(self, **kwargs):
-        # force wrap footnote entries with brackets
-        for node in self.document.traverse(nodes.footnote):
-            for footnote_label in node.traverse(nodes.label):
-                footnote_label.insert(0, nodes.Text('['))
-                footnote_label.append(nodes.Text(']'))
-                break
-
-        for node in self.document.traverse(nodes.footnote_reference):
-            node.insert(0, nodes.Text('['))
-            node.append(nodes.Text(']'))
-
         for node in self.document.traverse(nodes.reference):
             next_node = next(iter(node.children), None)
 

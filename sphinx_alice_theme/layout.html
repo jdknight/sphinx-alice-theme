@@ -8,7 +8,6 @@
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
 
     <link rel="stylesheet" href="{{ pathto('_static/css/normalize.css', 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
     {%- for css in css_files %}
         {%- if css|attr("filename") %}
@@ -26,7 +25,7 @@
     {% endif %}
 
     {%- block scripts %}
-    <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+    <script src="{{ pathto('_static/js/jquery-3.7.1.min.js', 1) }}"></script>
     <script src="{{ pathto('_static/js/gumshoe/gumshoe.polyfills.min.js', 1) }}"></script>
     {%- for js in script_files %}
     {{ js_tag(js) }}
