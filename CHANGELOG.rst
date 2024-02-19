@@ -1,3 +1,10 @@
+Development
+===========
+
+- Add support for ``navigation_with_keys``
+- Reduce spacing after admonition titles
+- Support newer Sphinx/docutils versions
+
 0.2.0 (2021-11-23)
 ==================
 
