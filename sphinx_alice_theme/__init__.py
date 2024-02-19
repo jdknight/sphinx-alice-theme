@@ -1,7 +1,7 @@
 # Copyright James Knight
 
 from docutils import nodes
-from os import path
+from pathlib import Path
 from sphinx.transforms.post_transforms import SphinxPostTransform
 
 
@@ -31,7 +31,7 @@ class AliceThemeTransform(SphinxPostTransform):
 
 def setup(app):
     app.add_html_theme('sphinx_alice_theme',
-        path.abspath(path.dirname(__file__)))
+        Path(Path(__file__).parent).resolve())
     app.add_post_transform(AliceThemeTransform)
 
     return {

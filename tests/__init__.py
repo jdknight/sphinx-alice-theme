@@ -1,7 +1,7 @@
 # Copyright James Knight
 
 from os import environ
-from os import path
+from pathlib import Path
 from sphinx.application import Sphinx
 from sphinx.util.docutils import docutils_namespace
 import shutil
@@ -12,9 +12,9 @@ import unittest
 class TestAliceTheme(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        self.test_dir = path.dirname(path.realpath(__file__))
-        self.root_dir = path.dirname(self.test_dir)
-        self.doc_dir = path.join(self.root_dir, 'Documentation')
+        self.test_dir = Path(__file__).resolve().parent
+        self.root_dir = self.test_dir.parent
+        self.doc_dir = self.root_dir / 'Documentation'
 
     def test_html_builder(self):
         out_dir, doctree_dir = self._prepare_output('html')
@@ -29,10 +29,10 @@ class TestAliceTheme(unittest.TestCase):
         if 'TOX_ENV_NAME' in environ:
             prefix = environ['TOX_ENV_NAME'] + '-'
 
-        output_dir = path.join(self.test_dir, '_build')
-        container_dir = path.join(output_dir, prefix + name)
-        out_dir = path.join(container_dir, 'build')
-        doctree_dir = path.join(container_dir, 'doctree')
+        output_dir = self.test_dir / '_build'
+        container_dir = output_dir / (prefix + name)
+        out_dir = container_dir / 'build'
+        doctree_dir = container_dir / 'doctree'
 
         shutil.rmtree(container_dir, ignore_errors=True)
         return out_dir, doctree_dir
