@@ -1,6 +1,27 @@
 name: Build
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/build.yml'
+      - 'sphinx_alice_theme/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'ruff.toml'
+      - 'tox.ini'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/build.yml'
+      - 'sphinx_alice_theme/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'ruff.toml'
+      - 'tox.ini'
+  workflow_dispatch:
 
 jobs:
   build:
