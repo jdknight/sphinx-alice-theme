@@ -8,9 +8,6 @@ doc_dir = os.path.dirname(os.path.realpath(__file__))
 root_dir = os.path.dirname(doc_dir)
 sys.path.insert(0, root_dir)
 
-# common
-master_doc = 'index'
-
 # meta
 project = 'Alice Theme for Sphinx'
 
