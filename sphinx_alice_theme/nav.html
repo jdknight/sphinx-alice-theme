@@ -38,6 +38,7 @@
     {% endblock %}
 </nav>
 <nav class="alice-topbar">
+    {% block topbar %}
     <button id="alice-topbar-toggle-menu">
         <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
@@ -54,6 +55,7 @@
     </a>
 
     &nbsp;
+    {% endblock %}
 </nav>
 <label id="sidebar-bg"></label>
 
