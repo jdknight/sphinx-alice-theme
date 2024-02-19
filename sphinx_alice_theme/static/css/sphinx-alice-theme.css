@@ -338,6 +338,10 @@ ul.breadcrumbs li {
     border-color: #b2d4ff;
 }
 
+.admonition-title {
+    margin-bottom: 0;
+}
+
 .admonition-title:not(.admonition) {
     font-weight: 500;
     margin-top: 5px;
