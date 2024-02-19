@@ -25,7 +25,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build (${{ matrix.toxenv }})
     runs-on: ${{ matrix.os }}
     container:
       image: ${{ matrix.img }}
