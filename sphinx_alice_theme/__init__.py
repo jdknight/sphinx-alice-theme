@@ -11,7 +11,7 @@ __version__ = '0.3.0-dev0'
 class AliceThemeTransform(SphinxPostTransform):
     default_priority = 400
 
-    def run(self, **kwargs):
+    def run(self):
         for node in self.document.findall(nodes.reference):
             next_node = next(iter(node.children), None)
 
