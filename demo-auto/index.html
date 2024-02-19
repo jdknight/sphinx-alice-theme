@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+    <title>Auto-extensions</title>
+
+    <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/sphinx-alice-theme.css?v=fdf94549" />
+    
+    <script src="../_static/js/jquery-3.7.1.min.js"></script>
+    <script src="../_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="../_static/documentation_options.js?v=d4c685ee"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="next" title="Bibliographic fields" href="../demo-bibliographic/" />
+    <link rel="prev" title="Admonitions" href="../demo-admonitions/" />
+</head><body>
+<div class="alice-container">
+    <nav class="sidebar" aria-label="sidebar">
+    <div id="sidebar-top">
+        
+
+        <a href="../">
+        
+        Alice Theme for Sphinx
+        
+
+        
+        </a>
+
+        
+    </div>
+
+    
+    <div class="nav-toctree">
+        
+<div>
+    <form id="quick-search" action="../search/" method="get">
+        <input type="text" name="q" placeholder="Search" />
+    </form>
+</div>
+        
+        
+        
+        
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../options/">Options</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../demo/">Demonstration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../demo-admonitions/">Admonitions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Auto-extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-bibliographic/">Bibliographic fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-code/">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-download/">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-images/">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-indentation/">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-markup/">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-other/">Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-para-markup/">Paragraph-level markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-references/">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-sections/">Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-tables/">Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/">Hacking</a></li>
+</ul>
+
+        
+        
+    </div>
+    
+
+    
+    
+</nav>
+<nav class="alice-topbar">
+    
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
+
+    
+    <a href="../"> Alice Theme for Sphinx
+    
+    </a>
+
+    &nbsp;
+    
+</nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
+    <section>
+        <div class="alice-content">
+            
+            <div class="nav-container">
+                
+                <div class="nav-top float-right">
+                    
+                    <a href="../demo-admonitions/" title="Admonitions" accesskey="p">← Previous</a>
+                    
+                    
+                     |
+                    
+                    
+                    <a href="../demo-bibliographic/" title="Bibliographic fields" accesskey="n">Next →</a>
+                    
+                </div>
+                
+                <ul class="breadcrumbs">
+    <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+    
+    <li><a href="../demo/">Demonstration</a> &raquo;</li>
+    
+    <li>Auto-extensions</li>
+</ul>
+                
+            </div>
+
+            <hr/>
+            
+            
+  <section id="module-docutils">
+<span id="auto-extensions"></span><h1>Auto-extensions<a class="headerlink" href="#module-docutils" title="Link to this heading">¶</a></h1>
+<p>This is the Docutils (Python Documentation Utilities) package.</p>
+<section id="package-structure">
+<h2>Package Structure<a class="headerlink" href="#package-structure" title="Link to this heading">¶</a></h2>
+<p>Modules:</p>
+<ul class="simple">
+<li><p>__init__.py: Contains component base classes, exception classes, and
+Docutils version information.</p></li>
+<li><p>core.py: Contains the <code class="docutils literal notranslate"><span class="pre">Publisher</span></code> class and <code class="docutils literal notranslate"><span class="pre">publish_*()</span></code> convenience
+functions.</p></li>
+<li><p>frontend.py: Runtime settings (command-line interface, configuration files)
+processing, for Docutils front-ends.</p></li>
+<li><p>io.py: Provides a uniform API for low-level input and output.</p></li>
+<li><p>nodes.py: Docutils document tree (doctree) node class library.</p></li>
+<li><p>statemachine.py: A finite state machine specialized for
+regular-expression-based text filters.</p></li>
+</ul>
+<p>Subpackages:</p>
+<ul>
+<li><p>languages: Language-specific mappings of terms.</p></li>
+<li><p>parsers: Syntax-specific input parser modules or packages.</p></li>
+<li><p>readers: Context-specific input handlers which understand the data
+source and manage a parser.</p></li>
+<li><p>transforms: Modules used by readers and writers to modify
+the Docutils document tree.</p></li>
+<li><p>utils: Contains the <code class="docutils literal notranslate"><span class="pre">Reporter</span></code> system warning class and miscellaneous
+utilities used by readers, writers, and transforms.</p>
+<p>utils/urischemes.py: Contains a complete mapping of known URI addressing
+scheme names to descriptions.</p>
+</li>
+<li><p>utils/math: Contains functions for conversion of mathematical notation
+between different formats (LaTeX, MathML, text, …).</p></li>
+<li><p>writers: Format-specific output translators.</p></li>
+</ul>
+</section>
+<dl class="py exception">
+<dt class="sig sig-object py" id="docutils.ApplicationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">ApplicationError</span></span><a class="headerlink" href="#docutils.ApplicationError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docutils.Component">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">Component</span></span><a class="headerlink" href="#docutils.Component" title="Link to this definition">¶</a></dt>
+<dd><p>Base class for Docutils components.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.Component.component_type">
+<span class="sig-name descname"><span class="pre">component_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docutils.Component.component_type" title="Link to this definition">¶</a></dt>
+<dd><p>Name of the component type (‘reader’, ‘parser’, ‘writer’).  Override in
+subclasses.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.Component.supported">
+<span class="sig-name descname"><span class="pre">supported</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#docutils.Component.supported" title="Link to this definition">¶</a></dt>
+<dd><p>Name and aliases for this component.  Override in subclasses.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docutils.Component.supports">
+<span class="sig-name descname"><span class="pre">supports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docutils.Component.supports" title="Link to this definition">¶</a></dt>
+<dd><p>Is <cite>format</cite> supported by this component?</p>
+<p>To be used by transforms to ask the dependent component if it supports
+a certain input context or output format.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="docutils.DataError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">DataError</span></span><a class="headerlink" href="#docutils.DataError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docutils.SettingsSpec">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">SettingsSpec</span></span><a class="headerlink" href="#docutils.SettingsSpec" title="Link to this definition">¶</a></dt>
+<dd><p>Runtime setting specification base class.</p>
+<p>SettingsSpec subclass objects used by <cite>docutils.frontend.OptionParser</cite>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.SettingsSpec.config_section">
+<span class="sig-name descname"><span class="pre">config_section</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docutils.SettingsSpec.config_section" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the config file section specific to this component
+(lowercase, no brackets).  Override in subclasses.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.SettingsSpec.config_section_dependencies">
+<span class="sig-name descname"><span class="pre">config_section_dependencies</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docutils.SettingsSpec.config_section_dependencies" title="Link to this definition">¶</a></dt>
+<dd><p>A list of names of config file sections that are to be applied before
+<cite>config_section</cite>, in order (from general to specific).  In other words,
+the settings in <cite>config_section</cite> are to be overlaid on top of the settings
+from these sections.  The “general” section is assumed implicitly.
+Override in subclasses.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.SettingsSpec.relative_path_settings">
+<span class="sig-name descname"><span class="pre">relative_path_settings</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#docutils.SettingsSpec.relative_path_settings" title="Link to this definition">¶</a></dt>
+<dd><p>Settings containing filesystem paths.  Override in subclasses.
+Settings listed here are to be interpreted relative to the current working
+directory.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.SettingsSpec.settings_default_overrides">
+<span class="sig-name descname"><span class="pre">settings_default_overrides</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docutils.SettingsSpec.settings_default_overrides" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of auxiliary defaults, to override defaults for settings
+defined in other components’ <cite>setting_specs</cite>.  Override in subclasses.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.SettingsSpec.settings_defaults">
+<span class="sig-name descname"><span class="pre">settings_defaults</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docutils.SettingsSpec.settings_defaults" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of defaults for settings not in <cite>settings_spec</cite> (internal
+settings, intended to be inaccessible by command-line and config file).
+Override in subclasses.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.SettingsSpec.settings_spec">
+<span class="sig-name descname"><span class="pre">settings_spec</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#docutils.SettingsSpec.settings_spec" title="Link to this definition">¶</a></dt>
+<dd><p>Runtime settings specification.  Override in subclasses.</p>
+<p>Defines runtime settings and associated command-line options, as used by
+<cite>docutils.frontend.OptionParser</cite>.  This is a tuple of:</p>
+<ul>
+<li><p>Option group title (string or <cite>None</cite> which implies no group, just a list
+of single options).</p></li>
+<li><p>Description (string or <cite>None</cite>).</p></li>
+<li><p>A sequence of option tuples.  Each consists of:</p>
+<ul>
+<li><p>Help text (string)</p></li>
+<li><p>List of option strings (e.g. <code class="docutils literal notranslate"><span class="pre">['-Q',</span> <span class="pre">'--quux']</span></code>).</p></li>
+<li><p>Dictionary of keyword arguments sent to the OptionParser/OptionGroup
+<code class="docutils literal notranslate"><span class="pre">add_option</span></code> method.</p>
+<p>Runtime setting names are derived implicitly from long option names
+(’–a-setting’ becomes <code class="docutils literal notranslate"><span class="pre">settings.a_setting</span></code>) or explicitly from the
+‘dest’ keyword argument.</p>
+<p>Most settings will also have a ‘validator’ keyword &amp; function.  The
+validator function validates setting values (from configuration files
+and command-line option arguments) and converts them to appropriate
+types.  For example, the <code class="docutils literal notranslate"><span class="pre">docutils.frontend.validate_boolean</span></code>
+function, <strong>required by all boolean settings</strong>, converts true values
+(‘1’, ‘on’, ‘yes’, and ‘true’) to 1 and false values (‘0’, ‘off’,
+‘no’, ‘false’, and ‘’) to 0.  Validators need only be set once per
+setting.  See the <cite>docutils.frontend.validate_*</cite> functions.</p>
+<p>See the optparse docs for more details.</p>
+</li>
+</ul>
+</li>
+<li><p>More triples of group title, description, options, as many times as
+needed.  Thus, <cite>settings_spec</cite> tuples can be simply concatenated.</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docutils.TransformSpec">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">TransformSpec</span></span><a class="headerlink" href="#docutils.TransformSpec" title="Link to this definition">¶</a></dt>
+<dd><p>Runtime transform specification base class.</p>
+<p>Provides the interface to register “transforms” and helper functions
+to resolve references with a <cite>docutils.transforms.Transformer</cite>.</p>
+<p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/transforms.html">https://docutils.sourceforge.io/docs/ref/transforms.html</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="docutils.TransformSpec.get_transforms">
+<span class="sig-name descname"><span class="pre">get_transforms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#docutils.TransformSpec.get_transforms" title="Link to this definition">¶</a></dt>
+<dd><p>Transforms required by this class.  Override in subclasses.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docutils.TransformSpec.unknown_reference_resolvers">
+<span class="sig-name descname"><span class="pre">unknown_reference_resolvers</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#docutils.TransformSpec.unknown_reference_resolvers" title="Link to this definition">¶</a></dt>
+<dd><p>List of functions to try to resolve unknown references.</p>
+<p>Unknown references have a ‘refname’ attribute which doesn’t correspond
+to any target in the document.  Called when the transforms in
+<cite>docutils.transforms.references</cite> are unable to find a correct target.</p>
+<p>The list should contain functions which will try to resolve unknown
+references, with the following signature:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reference_resolver</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Returns boolean: true if resolved, false if not.&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>If the function is able to resolve the reference, it should also remove
+the ‘refname’ attribute and mark the node as resolved:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">node</span><span class="p">[</span><span class="s1">&#39;refname&#39;</span><span class="p">]</span>
+<span class="n">node</span><span class="o">.</span><span class="n">resolved</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Each function must have a “priority” attribute which will affect the order
+the unknown_reference_resolvers are run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reference_resolver</span><span class="o">.</span><span class="n">priority</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+<p>This hook is provided for 3rd party extensions.
+Example use case: the <cite>MoinMoin - ReStructured Text Parser</cite>
+in <code class="docutils literal notranslate"><span class="pre">sandbox/mmgilbe/rst.py</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docutils.VersionInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">VersionInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">micro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">releaselevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'final'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docutils.VersionInfo" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt class="sig sig-object py" id="docutils.nodes.Node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.nodes.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#docutils.nodes.Node" title="Link to this definition">¶</a></dt>
+<dd><p>Abstract base class of nodes in a document tree.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="docutils.nodes.Node.walk">
+<span class="sig-name descname"><span class="pre">walk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visitor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docutils.nodes.Node.walk" title="Link to this definition">¶</a></dt>
+<dd><p>Traverse a tree of <cite>Node</cite> objects, calling the
+<cite>dispatch_visit()</cite> method of <cite>visitor</cite> when entering each
+node.  (The <cite>walkabout()</cite> method is similar, except it also
+calls the <cite>dispatch_departure()</cite> method before exiting each
+node.)</p>
+<p>This tree traversal supports limited in-place tree
+modifications.  Replacing one node with one or more nodes is
+OK, as is removing an element.  However, if the node removed
+or replaced occurs after the current node, the old node will
+still be traversed, and any new nodes will not.</p>
+<p>Within <code class="docutils literal notranslate"><span class="pre">visit</span></code> methods (and <code class="docutils literal notranslate"><span class="pre">depart</span></code> methods for
+<cite>walkabout()</cite>), <cite>TreePruningException</cite> subclasses may be raised
+(<cite>SkipChildren</cite>, <cite>SkipSiblings</cite>, <cite>SkipNode</cite>, <cite>SkipDeparture</cite>).</p>
+<p>Parameter <cite>visitor</cite>: A <cite>NodeVisitor</cite> object, containing a
+<code class="docutils literal notranslate"><span class="pre">visit</span></code> implementation for each <cite>Node</cite> subclass encountered.</p>
+<p>Return true if we should stop the traversal.</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py function">
+<dt class="sig sig-object py" id="docutils.nodes.serial_escape">
+<span class="sig-prename descclassname"><span class="pre">docutils.nodes.</span></span><span class="sig-name descname"><span class="pre">serial_escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docutils.nodes.serial_escape" title="Link to this definition">¶</a></dt>
+<dd><p>Escape string values that are elements of a list, for serialization.</p>
+</dd></dl>
+
+</section>
+
+
+
+            
+            
+            <hr/>
+
+            <div class="nav-container nav-bottom">
+                
+                <a href="../demo-bibliographic/" class="float-right"
+                        title="Bibliographic fields" accesskey="n" rel="next">Next →</a>
+                
+                
+                <a href="../demo-admonitions/" class="float-left"
+                        title="Admonitions" accesskey="p" rel="prev">← Previous</a>
+                
+            </div>
+            
+
+            <footer>
+    
+
+    
+    <a href="../_sources/demo-auto.rst.txt" rel="nofollow">View page source</a>.
+        <br />
+    
+        
+        Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
+    <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
+</footer>
+        </div>
+    </section>
+</div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
+</body>
+</html>

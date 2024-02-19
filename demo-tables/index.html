@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+    <title>Tables</title>
+
+    <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/sphinx-alice-theme.css?v=fdf94549" />
+    
+    <script src="../_static/js/jquery-3.7.1.min.js"></script>
+    <script src="../_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="../_static/documentation_options.js?v=d4c685ee"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="next" title="Hacking" href="../hacking/" />
+    <link rel="prev" title="Sections" href="../demo-sections/" />
+</head><body>
+<div class="alice-container">
+    <nav class="sidebar" aria-label="sidebar">
+    <div id="sidebar-top">
+        
+
+        <a href="../">
+        
+        Alice Theme for Sphinx
+        
+
+        
+        </a>
+
+        
+    </div>
+
+    
+    <div class="nav-toctree">
+        
+<div>
+    <form id="quick-search" action="../search/" method="get">
+        <input type="text" name="q" placeholder="Search" />
+    </form>
+</div>
+        
+        
+        
+        
+        
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../options/">Options</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../demo/">Demonstration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../demo-admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-auto/">Auto-extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-bibliographic/">Bibliographic fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-code/">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-download/">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-images/">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-indentation/">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-markup/">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-other/">Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-para-markup/">Paragraph-level markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-references/">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo-sections/">Sections</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hacking/">Hacking</a></li>
+</ul>
+
+        
+        
+    </div>
+    
+
+    
+    
+</nav>
+<nav class="alice-topbar">
+    
+    <button id="alice-topbar-toggle-menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 2.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+          <path d="m1.72 12.2h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
+        </svg>
+    </button>
+
+    
+    <a href="../"> Alice Theme for Sphinx
+    
+    </a>
+
+    &nbsp;
+    
+</nav>
+<label id="sidebar-bg"></label>
+
+<script>
+function cleanupSidebar() {
+    $('#sidebar-top').css('display', '');
+    $('#sidebar-bg').css('display', '');
+    $('nav.sidebar').css('display', '');
+}
+
+$('#alice-topbar-toggle-menu').click(function() {
+    $('#sidebar-top').css('display', 'none');
+    $('nav.sidebar').css('display', 'unset');
+    $('#sidebar-bg').css('display', 'unset');
+
+    $(document).on('click', 'a', function() {
+        cleanupSidebar();
+    });
+});
+
+$('#sidebar-bg').click(function() {
+    cleanupSidebar();
+});
+</script>
+    <section>
+        <div class="alice-content">
+            
+            <div class="nav-container">
+                
+                <div class="nav-top float-right">
+                    
+                    <a href="../demo-sections/" title="Sections" accesskey="p">← Previous</a>
+                    
+                    
+                     |
+                    
+                    
+                    <a href="../hacking/" title="Hacking" accesskey="n">Next →</a>
+                    
+                </div>
+                
+                <ul class="breadcrumbs">
+    <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+    
+    <li><a href="../demo/">Demonstration</a> &raquo;</li>
+    
+    <li>Tables</li>
+</ul>
+                
+            </div>
+
+            <hr/>
+            
+            
+  <section id="tables">
+<h1>Tables<a class="headerlink" href="#tables" title="Link to this heading">¶</a></h1>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>Header row, column 1
+(header rows optional)</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Header 4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>body row 1, column 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>column 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>body row 2</p></td>
+<td colspan="3"><p>Cells may span columns.</p></td>
+</tr>
+<tr class="row-even"><td><p>body row 3</p></td>
+<td rowspan="2"><p>Cells may
+span rows.</p></td>
+<td colspan="2" rowspan="2"><ul class="simple">
+<li><p>Cells can contain</p></li>
+<li><p>items such as</p></li>
+<li><p>this list.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>body row 4</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>Content</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>First</p></td>
+<td><p>This cell contains another table:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A and B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Second</p></td>
+<td><p>This cell contains a table in another table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index2</p></th>
+<th class="head"><p>More Content</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>idx-a</p></td>
+<td><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A and B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><p>idx-b</p></td>
+<td><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>row 1, col 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>column 4</p></td>
+</tr>
+<tr class="row-even"><td><p>row 2, col 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>column 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>row 3, col 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+<td><p>column 4</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-right">
+<thead>
+<tr class="row-odd"><th class="head"><p>A-1</p></th>
+<th class="head"><p>B-1</p></th>
+<th class="head"><p>C-1</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>A-2</p></th>
+<th class="head"><p>B-2</p></th>
+<th class="head"><p>C-2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+            
+            
+            <hr/>
+
+            <div class="nav-container nav-bottom">
+                
+                <a href="../hacking/" class="float-right"
+                        title="Hacking" accesskey="n" rel="next">Next →</a>
+                
+                
+                <a href="../demo-sections/" class="float-left"
+                        title="Sections" accesskey="p" rel="prev">← Previous</a>
+                
+            </div>
+            
+
+            <footer>
+    
+
+    
+    <a href="../_sources/demo-tables.rst.txt" rel="nofollow">View page source</a>.
+        <br />
+    
+        
+        Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using the
+    <a href="https://github.com/jdknight/sphinx-alice-theme">Alice theme</a>.
+</footer>
+        </div>
+    </section>
+</div>
+
+<script>new Gumshoe('.nav-toctree a');</script>
+</body>
+</html>

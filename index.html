@@ -8,17 +8,16 @@
     <title>Alice Theme for Sphinx</title>
 
     <link rel="stylesheet" href="_static/css/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/sphinx-alice-theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-alice-theme.css?v=fdf94549" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/js/jquery-3.7.1.min.js"></script>
     <script src="_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <script src="_static/documentation_options.js?v=d4c685ee"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="next" title="Installation" href="install/" />
 </head><body>
 <div class="alice-container">
     <nav class="sidebar" aria-label="sidebar">
@@ -40,7 +39,7 @@
     <div class="nav-toctree">
         
 <div>
-    <form id="quick-search" action="search.html" method="get">
+    <form id="quick-search" action="search/" method="get">
         <input type="text" name="q" placeholder="Search" />
     </form>
 </div>
@@ -50,19 +49,23 @@
         
         
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demo.html">Demonstration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install/">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options/">Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/">Demonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/">Hacking</a></li>
 </ul>
 
         
         
     </div>
     
+
+    
+    
 </nav>
 <nav class="alice-topbar">
+    
     <button id="alice-topbar-toggle-menu">
         <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path d="m1.72 7.25h12.5c0.465 0 0.535 2 0 2h-12.5c-0.414 0-0.414-2 0-2z"/>
@@ -77,6 +80,7 @@
     </a>
 
     &nbsp;
+    
 </nav>
 <label id="sidebar-bg"></label>
 
@@ -110,7 +114,7 @@ $('#sidebar-bg').click(function() {
                     
                     
                     
-                    <a href="install.html" title="Installation" accesskey="n">Next →</a>
+                    <a href="install/" title="Installation" accesskey="n">Next →</a>
                     
                 </div>
                 
@@ -126,42 +130,42 @@ $('#sidebar-bg').click(function() {
             
             
   <section id="alice-theme-for-sphinx">
-<h1>Alice Theme for Sphinx<a class="headerlink" href="#alice-theme-for-sphinx" title="Permalink to this headline">¶</a></h1>
+<h1>Alice Theme for Sphinx<a class="headerlink" href="#alice-theme-for-sphinx" title="Link to this heading">¶</a></h1>
 <p>The Alice theme for <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> documentation.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#quick-start">Quick-start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#development">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install/">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install/#quick-start">Quick-start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install/#development">Development</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="options.html#canonical-url">canonical_url</a></li>
-<li class="toctree-l2"><a class="reference internal" href="options.html#includehidden">includehidden</a></li>
-<li class="toctree-l2"><a class="reference internal" href="options.html#navigation-depth">navigation_depth</a></li>
-<li class="toctree-l2"><a class="reference internal" href="options.html#prev-next-buttons-location">prev_next_buttons_location</a></li>
-<li class="toctree-l2"><a class="reference internal" href="options.html#titles-only">titles_only</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options/">Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="options/#canonical-url">canonical_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options/#includehidden">includehidden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options/#navigation-depth">navigation_depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options/#prev-next-buttons-location">prev_next_buttons_location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="options/#titles-only">titles_only</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="demo.html">Demonstration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="demo-admonitions.html">Admonitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-auto.html">Auto-extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic.html">Bibliographic fields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-code.html">Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-download.html">Download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-images.html">Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-indentation.html">Indentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-lists.html">Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-markup.html">Markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-other.html">Other</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-para-markup.html">Paragraph-level markup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-references.html">References</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-sections.html">Sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="demo-tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/">Demonstration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demo-admonitions/">Admonitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-auto/">Auto-extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-bibliographic/">Bibliographic fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-code/">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-download/">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-images/">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-indentation/">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-lists/">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-markup/">Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-other/">Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-para-markup/">Paragraph-level markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-references/">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-sections/">Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demo-tables/">Tables</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hacking.html">Hacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hacking/">Hacking</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -176,7 +180,7 @@ $('#sidebar-bg').click(function() {
 
             <div class="nav-container nav-bottom">
                 
-                <a href="install.html" class="float-right"
+                <a href="install/" class="float-right"
                         title="Installation" accesskey="n" rel="next">Next →</a>
                 
                 
