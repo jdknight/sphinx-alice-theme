@@ -1,5 +1,4 @@
-Alice Theme for Sphinx
-======================
+# Alice Theme for Sphinx
 
 [![pip Version](https://img.shields.io/pypi/v/sphinx-alice-theme.svg)][PyPi]
 [![Build](https://github.com/jdknight/sphinx-alice-theme/actions/workflows/build.yml/badge.svg)][Build]
@@ -19,8 +18,7 @@ Provides the Alice theme for [Sphinx][Sphinx] projects.
     <img src="https://sphinx-alice-theme.jdknight.me/overview-09.png" width="30%"></img>
 </div>
 
-Installation
-------------
+## Installation
 
 This theme can be installed using [pip][pip]:
 
@@ -30,8 +28,7 @@ pip install -U sphinx-alice-theme
 python -m pip install -U sphinx-alice-theme
 ```
 
-Usage
------
+## Usage
 
 For an existing Sphinx documentation set, the Alice theme can be applied by
 configuring the [`html_theme`][html_theme] value to `sphinx_alice_theme`.
@@ -53,8 +50,7 @@ html_theme_options = {
 }
 ```
 
-Dependencies
-------------
+## Dependencies
 
 - [Gumshoe][Gumshoe]
 
