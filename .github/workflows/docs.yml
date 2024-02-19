@@ -35,6 +35,7 @@ jobs:
           cd Documentation
 
           echo "synchronizing new content..."
+          git fetch origin gh-pages
           git worktree add gh-pages gh-pages
           rsync -av --delete --exclude '.git' --exclude '.doctrees' \
             _build/html/ gh-pages/
@@ -49,6 +50,7 @@ jobs:
               echo "adjusting url..."
               git remote set-url --push origin \
                 https://jdknight:$GITHUB_TOKEN@github.com/jdknight/sphinx-alice-theme
+
               echo "pushing new content..."
               git push origin gh-pages
               echo "done"
