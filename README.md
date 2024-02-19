@@ -58,7 +58,7 @@ html_theme_options = {
 [Build]: https://github.com/jdknight/sphinx-alice-theme/actions/workflows/build.yml
 [Documentation]: https://sphinx-alice-theme.jdknight.me/
 [Gumshoe]: https://github.com/cferdinandi/gumshoe
-[PyPi]: https://pypi.python.org/pypi/sphinx-alice-theme
+[PyPi]: https://pypi.org/project/sphinx-alice-theme/
 [Sphinx]: https://www.sphinx-doc.org/
 [html_theme]: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme
 [pip]: https://pip.pypa.io/
