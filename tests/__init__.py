@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright 2020 James Knight
+# Copyright James Knight
 
 from os import environ
 from os import path
