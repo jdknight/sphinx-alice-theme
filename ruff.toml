@@ -1,0 +1,15 @@
+lint.select = [
+    'ALL',
+]
+
+lint.ignore = [
+    # ignore annotations
+    'ANN',
+    # ignore pydocstyle
+    'D',
+    # imports are sorted lexicographically in this project
+    'I001',
+    # single quotes are preferred in this project
+    'Q000',
+    'Q001',
+]
