@@ -33,6 +33,13 @@
     {%- endfor %}
     {%- endblock %}
 
+    {%- if next %}
+    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+    {%- endif %}
+    {%- if prev %}
+    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+    {%- endif %}
+
     {%- block extrahead %}{% endblock %}
 </head>
 {%- block body_tag %}<body>{% endblock %}
