@@ -9,13 +9,13 @@
 
     <link rel="stylesheet" href="../_static/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/css/sphinx-alice-theme.css?v=fdf94549" />
     
     <script src="../_static/js/jquery-3.7.1.min.js"></script>
     <script src="../_static/js/gumshoe/gumshoe.polyfills.min.js"></script>
     <script src="../_static/documentation_options.js?v=d4c685ee"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="next" title="Bibliographic fields" href="../demo-bibliographic/" />
     <link rel="prev" title="Admonitions" href="../demo-admonitions/" />
@@ -190,12 +190,12 @@ between different formats (LaTeX, MathML, text, …).</p></li>
 </section>
 <dl class="py exception">
 <dt class="sig sig-object py" id="docutils.ApplicationError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">ApplicationError</span></span><a class="headerlink" href="#docutils.ApplicationError" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">ApplicationError</span></span><a class="headerlink" href="#docutils.ApplicationError" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="docutils.Component">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">Component</span></span><a class="headerlink" href="#docutils.Component" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">Component</span></span><a class="headerlink" href="#docutils.Component" title="Link to this definition">¶</a></dt>
 <dd><p>Base class for Docutils components.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="docutils.Component.component_type">
@@ -222,12 +222,12 @@ a certain input context or output format.</p>
 
 <dl class="py exception">
 <dt class="sig sig-object py" id="docutils.DataError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">DataError</span></span><a class="headerlink" href="#docutils.DataError" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">DataError</span></span><a class="headerlink" href="#docutils.DataError" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="docutils.SettingsSpec">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">SettingsSpec</span></span><a class="headerlink" href="#docutils.SettingsSpec" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">SettingsSpec</span></span><a class="headerlink" href="#docutils.SettingsSpec" title="Link to this definition">¶</a></dt>
 <dd><p>Runtime setting specification base class.</p>
 <p>SettingsSpec subclass objects used by <cite>docutils.frontend.OptionParser</cite>.</p>
 <dl class="py attribute">
@@ -310,7 +310,7 @@ needed.  Thus, <cite>settings_spec</cite> tuples can be simply concatenated.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="docutils.TransformSpec">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">TransformSpec</span></span><a class="headerlink" href="#docutils.TransformSpec" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">TransformSpec</span></span><a class="headerlink" href="#docutils.TransformSpec" title="Link to this definition">¶</a></dt>
 <dd><p>Runtime transform specification base class.</p>
 <p>Provides the interface to register “transforms” and helper functions
 to resolve references with a <cite>docutils.transforms.Transformer</cite>.</p>
@@ -330,7 +330,7 @@ to any target in the document.  Called when the transforms in
 <cite>docutils.transforms.references</cite> are unable to find a correct target.</p>
 <p>The list should contain functions which will try to resolve unknown
 references, with the following signature:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reference_resolver</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">reference_resolver</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Returns boolean: true if resolved, false if not.&#39;&#39;&#39;</span>
 </pre></div>
 </div>
@@ -354,13 +354,13 @@ in <code class="docutils literal notranslate"><span class="pre">sandbox/mmgilbe/
 
 <dl class="py class">
 <dt class="sig sig-object py" id="docutils.VersionInfo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">VersionInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">micro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">releaselevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'final'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docutils.VersionInfo" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.</span></span><span class="sig-name descname"><span class="pre">VersionInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">micro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">releaselevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'final'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docutils.VersionInfo" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <hr class="docutils" />
 <dl class="py class">
 <dt class="sig sig-object py" id="docutils.nodes.Node">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.nodes.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#docutils.nodes.Node" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docutils.nodes.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#docutils.nodes.Node" title="Link to this definition">¶</a></dt>
 <dd><p>Abstract base class of nodes in a document tree.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="docutils.nodes.Node.walk">
