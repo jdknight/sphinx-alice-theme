@@ -11,10 +11,10 @@ import unittest
 
 class TestAliceTheme(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self.test_dir = Path(__file__).resolve().parent
-        self.root_dir = self.test_dir.parent
-        self.doc_dir = self.root_dir / 'Documentation'
+    def setUpClass(cls):
+        cls.test_dir = Path(__file__).resolve().parent
+        cls.root_dir = cls.test_dir.parent
+        cls.doc_dir = cls.root_dir / 'Documentation'
 
     def test_html_builder(self):
         out_dir, doctree_dir = self._prepare_output('html')
